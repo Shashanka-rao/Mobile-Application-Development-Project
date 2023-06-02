@@ -35,3 +35,4 @@ public class MainActivity extends AppCompatActivity {
 
     }
 }
+//android:background="#220130"
