@@ -9,12 +9,12 @@
 
     <Button
         android:id="@+id/signInButton"
-        android:layout_width="199dp"
-        android:layout_height="61dp"
+        android:layout_width="234dp"
+        android:layout_height="73dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="104dp"
-        android:layout_marginBottom="105dp"
+        android:layout_marginEnd="85dp"
+        android:layout_marginBottom="109dp"
         android:background="@drawable/buttonradius"
         android:text="sign in"
         android:textAlignment="center"
