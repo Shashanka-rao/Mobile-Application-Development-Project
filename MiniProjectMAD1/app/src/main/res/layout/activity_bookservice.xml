@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#220130"
+    tools:context=".Bookservice">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="291dp"
+        android:layout_height="64dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="48dp"
+        android:layout_marginEnd="51dp"
+        android:layout_marginBottom="538dp"
+        android:text="Book Service"
+        android:textAlignment="center"
+        android:textColor="#23F1E5"
+        android:textSize="48sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/etLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="53dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="425dp"
+        android:background="@drawable/edittextradius"
+        android:backgroundTint="#7E638C"
+        android:drawableStart="@drawable/baseline_add_location_alt_24"
+        android:drawablePadding="5dp"
+        android:ems="10"
+        android:hint="Location"
+        android:inputType="text"
+        android:padding="8dp"
+        android:text=""
+        android:textColorHint="#DEDEDE"
+        android:textSize="18dp"
+        tools:layout_editor_absoluteX="100dp"
+        tools:layout_editor_absoluteY="124dp" />
+    <Button
+        android:id="@+id/btnBook"
+        android:layout_width="272dp"
+        android:layout_height="56dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="84dp"
+        android:background="@drawable/buttonradius"
+        android:text="BOOK"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textColor="#220130"
+        android:textSize="30dp" />
+
+    <Button
+        android:id="@+id/btnSelectDate"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="300dp"
+        android:backgroundTint="#7E638C"
+        android:text="Select Date"
+        android:background="@drawable/edittextradius"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#FFFFFF" />
+
+    <!-- Time picker -->
+
+    <TextView
+        android:id="@+id/tvSelectedDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="234dp"
+        android:layout_marginBottom="267dp"
+        android:text="Selected Date: "
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <Button
+        android:id="@+id/btnSelectTime"
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="200dp"
+        android:backgroundTint="#7E638C"
+        android:text="Select Time"
+        android:background="@drawable/edittextradius"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#DEDEDE" />
+
+    <TextView
+        android:id="@+id/tvSelectedTime"
+        android:layout_width="184dp"
+        android:layout_height="42dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="53dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="174dp"
+        android:layout_marginBottom="149dp"
+        android:text="Selected Time: "
+        android:textColor="#FFFFFF"
+        android:textSize="18sp"
+        android:visibility="gone" />
+
+    <ImageButton
+        android:id="@+id/backButtonBS"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="671dp"
+        android:backgroundTint="#220130"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+</RelativeLayout>

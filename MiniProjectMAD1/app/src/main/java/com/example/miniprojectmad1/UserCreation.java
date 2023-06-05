@@ -14,13 +14,14 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.miniprojectmad1.databinding.ActivityUserCreationBinding;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class UserCreation extends AppCompatActivity {
-
+//    ActivityUserCreationBinding binding;
     Button signUpButton;
     TextView signInButton;
     EditText signUpEmail,signUpPassword;
@@ -31,19 +32,21 @@ public class UserCreation extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        binding = ActivityUserCreationBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
         setContentView(R.layout.activity_user_creation);
+
         backButton = findViewById(R.id.backButton);
         signInButton = findViewById(R.id.signInButton);
         signUpButton = findViewById(R.id.signUpButton);
-
-//        signUp_etUsername = findViewById(R.id.signUpUsername);
         signUpEmail = findViewById(R.id.signUpEmail);
         signUpPassword = findViewById(R.id.signUpPassword);
+
         auth = FirebaseAuth.getInstance();
 
         //start here
 
-        signUpButton.setOnClickListener(new View.OnClickListener() {
+       signUpButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 String email1 = signUpEmail.getText().toString();

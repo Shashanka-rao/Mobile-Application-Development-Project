@@ -2,21 +2,27 @@ package com.example.miniprojectmad1;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-public class Home extends AppCompatActivity {
+import com.example.miniprojectmad1.databinding.ActivityHomeBinding;
 
+public class Home extends AppCompatActivity {
+//    ActivityHomeBinding binding;
     ImageView dashBoardBtn,contactUsBtn,carImage;
     TextView bookServiceBtn,serviceHistoryBtn,serviceCostBtn,trackServiceBtn;
     public int flag=0;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+//        binding = ActivityHomeBinding.inflate(getLayoutInflater());
+//        setContentView(binding.getRoot());
         setContentView(R.layout.activity_home);
+
         bookServiceBtn = findViewById(R.id.bookServiceBtn);
         serviceCostBtn = findViewById(R.id.serviceCostBtn);
         serviceHistoryBtn = findViewById(R.id.serviceHistoryBtn);
@@ -33,7 +39,7 @@ public class Home extends AppCompatActivity {
         trackServiceBtn.setVisibility(View.INVISIBLE);
 
 
-            dashBoardBtn.setOnClickListener(new View.OnClickListener() {
+        dashBoardBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     if(flag==0) {
@@ -46,7 +52,7 @@ public class Home extends AppCompatActivity {
                     }
                     else if(flag==1)
                     {
-                        bookServiceBtn.setVisibility(View.INVISIBLE);
+                       bookServiceBtn.setVisibility(View.INVISIBLE);
                         serviceCostBtn.setVisibility(View.INVISIBLE);
                         serviceHistoryBtn.setVisibility(View.INVISIBLE);
                         trackServiceBtn.setVisibility(View.INVISIBLE);
@@ -56,6 +62,20 @@ public class Home extends AppCompatActivity {
                 }
             });
 
+        bookServiceBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent intent = new Intent(Home.this, Bookservice.class);
+                    startActivity(intent);
+                }
+            });
+        serviceHistoryBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Home.this, ServiceHistory.class);
+                startActivity(intent);
+            }
+        });
 
 
     }
