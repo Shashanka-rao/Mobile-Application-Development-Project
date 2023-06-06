@@ -50,7 +50,6 @@ public class Login extends AppCompatActivity {
         {
             Intent intent = new Intent(Login.this,Home.class);
             startActivity(intent);
-
         }
         //start here
 
@@ -96,7 +95,10 @@ public class Login extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
-                startActivity(new Intent(Login.this, Home.class));
+                Intent intent2 = new Intent(Login.this,Home.class);
+                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+//              startActivity(new Intent(Login.this, Home.class));
+                startActivity(intent2);
             }
         });
 

@@ -5,17 +5,22 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.miniprojectmad1.databinding.ActivityHomeBinding;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.ktx.Firebase;
 
 public class Home extends AppCompatActivity {
 //    ActivityHomeBinding binding;
     ImageView dashBoardBtn,contactUsBtn,carImage;
     TextView bookServiceBtn,serviceHistoryBtn,serviceCostBtn,trackServiceBtn;
+    Button logoutButton;
     public int flag=0;
+    FirebaseAuth auth = FirebaseAuth.getInstance();
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,6 +36,8 @@ public class Home extends AppCompatActivity {
         dashBoardBtn = findViewById(R.id.dashBoardBtn);
         contactUsBtn = findViewById(R.id.contactUsBtn);
         carImage = findViewById(R.id.carImage);
+        logoutButton = findViewById(R.id.logoutButton);
+
 
         //default condition
         bookServiceBtn.setVisibility(View.INVISIBLE);
@@ -77,6 +84,28 @@ public class Home extends AppCompatActivity {
             }
         });
 
+        logoutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+             auth.signOut();
+             Intent intent = new Intent(Home.this, Login.class);
+             intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+             startActivity(intent);
+                finish();
+            }
+        });
 
     }
+
+    @Override
+    public void onBackPressed() {
+//        auth.signOut();
+        finish();
+        super.onBackPressed();
+    }
+
+//    @Override
+//    protected void onDestroy() {
+//        super.onDestroy();
+//    }
 }
