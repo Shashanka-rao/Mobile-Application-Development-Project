@@ -7,29 +7,31 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:background="#7E638C"
         android:orientation="vertical">
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:background="#220130"
-        android:orientation="vertical">
 
-        <TextView
-            android:id="@+id/DisplayKms"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_weight="1"
-            android:background="@drawable/buttonradius"
-            android:backgroundTint="#292329"
-            android:text="kms"
-            android:textAlignment="center"
-            android:textColor="#23F1E5"
-            android:textSize="40dp" />
-    </LinearLayout>
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:background="#220130"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/DisplayKms"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/buttonradius"
+                android:backgroundTint="#292329"
+                android:text="kms"
+                android:textAlignment="center"
+                android:textColor="#23F1E5"
+                android:textSize="40dp" />
+        </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="55dp"
@@ -53,7 +55,7 @@
                 android:text="Price"
                 android:textAlignment="center"
                 android:textColor="#00FFFF"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/tvQty"
@@ -63,7 +65,7 @@
                 android:text="Quantity"
                 android:textAlignment="center"
                 android:textColor="#00FFFF"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
 
             <TextView
                 android:id="@+id/tvTotal"
@@ -73,7 +75,7 @@
                 android:text="Sub Total"
                 android:textAlignment="center"
                 android:textColor="#00FFFF"
-                android:textSize="16dp"/>
+                android:textSize="16dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -88,8 +90,8 @@
                 android:layout_weight="1"
                 android:text="Engine Oil"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvEOPrice"
@@ -98,8 +100,8 @@
                 android:layout_weight="1"
                 android:text="300"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvEOQty"
@@ -108,8 +110,8 @@
                 android:layout_weight="1"
                 android:text="2"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvEOTotal"
@@ -118,8 +120,8 @@
                 android:layout_weight="1"
                 android:text="600"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -134,8 +136,8 @@
                 android:layout_weight="1"
                 android:text="Brake Fluid"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvBFPrice"
@@ -144,8 +146,8 @@
                 android:layout_weight="1"
                 android:text="350"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvBFQty"
@@ -154,8 +156,8 @@
                 android:layout_weight="1"
                 android:text="1"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvBFTotal"
@@ -164,8 +166,8 @@
                 android:layout_weight="1"
                 android:text="350"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -180,8 +182,8 @@
                 android:layout_weight="1"
                 android:text="Gear Oil"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvGOPrice"
@@ -190,8 +192,8 @@
                 android:layout_weight="1"
                 android:text="200"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvGOQty"
@@ -200,8 +202,8 @@
                 android:layout_weight="1"
                 android:text="1"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvGOTotal"
@@ -210,8 +212,8 @@
                 android:layout_weight="1"
                 android:text="200"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -226,8 +228,8 @@
                 android:layout_weight="1"
                 android:text="Seat Cusion"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvSCPrice"
@@ -236,8 +238,8 @@
                 android:layout_weight="1"
                 android:text="750"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvSCQty"
@@ -256,8 +258,8 @@
                 android:layout_weight="1"
                 android:text="2250"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
         </LinearLayout>
 
         <LinearLayout
@@ -272,8 +274,8 @@
                 android:layout_weight="1"
                 android:text="Washing"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvWPrice"
@@ -282,8 +284,8 @@
                 android:layout_weight="1"
                 android:text="250"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvWQty"
@@ -292,8 +294,8 @@
                 android:layout_weight="1"
                 android:text="1"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
 
             <TextView
                 android:id="@+id/tvWTotal"
@@ -302,8 +304,8 @@
                 android:layout_weight="1"
                 android:text="250"
                 android:textAlignment="center"
-                android:textSize="15dp"
-                android:textColor="#000000" />
+                android:textColor="#000000"
+                android:textSize="15dp" />
         </LinearLayout>
 
         <TextView
@@ -316,6 +318,7 @@
             android:text="Date :"
             android:textColor="#00FFFF"
             android:textSize="24sp" />
+
         <TextView
             android:id="@+id/tvTotalPrice"
             android:layout_width="match_parent"
@@ -326,7 +329,6 @@
             android:text="Total : Rs "
             android:textColor="#00FFFF"
             android:textSize="24sp" />
-
 
 
     </LinearLayout>

@@ -8,9 +8,11 @@ import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
+import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.miniprojectmad1.Models.BookServiceModel;
+import com.example.miniprojectmad1.R;
 import com.example.miniprojectmad1.databinding.ActivityBookserviceBinding;
 import com.example.miniprojectmad1.trackService;
 import com.google.firebase.database.FirebaseDatabase;
@@ -22,19 +24,22 @@ import java.util.Locale;
 
 
 public class Bookservice extends AppCompatActivity {
-    ActivityBookserviceBinding binding;
+    private ActivityBookserviceBinding binding;
 
     private Calendar selectedDate = Calendar.getInstance();
     private SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
     private SimpleDateFormat timeFormatter = new SimpleDateFormat("hh:mm a", Locale.getDefault());
 
     private CheckBox checkBox;
+    EditText etDrop1;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityBookserviceBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        etDrop1 = findViewById(R.id.etDrop1);
 
 //   Back button
      binding.backButtonBS.setOnClickListener(new View.OnClickListener() {
@@ -66,11 +71,26 @@ public class Bookservice extends AppCompatActivity {
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked)
                 {
+                    binding.tvDispDetails.setVisibility(View.VISIBLE);
+                    binding.pickUpTV.setVisibility(View.VISIBLE);
+                    binding.DropTV.setVisibility(View.VISIBLE);
                     binding.driverTV.setVisibility(View.VISIBLE);
+                    binding.etPickUp.setVisibility(View.VISIBLE);
+                    binding.etDrop1.setVisibility(View.VISIBLE);
                 }
                 else
                 {
                     binding.driverTV.setVisibility(View.INVISIBLE);
+                    binding.tvDispDetails.setVisibility(View.INVISIBLE);
+                    binding.pickUpTV.setVisibility(View.INVISIBLE);
+                    binding.DropTV.setVisibility(View.INVISIBLE);
+                    binding.driverTV.setVisibility(View.INVISIBLE);
+                    binding.etPickUp.setVisibility(View.INVISIBLE);
+                    binding.etDrop1.setVisibility(View.INVISIBLE);
+
+
+                    binding.etPickUp.setText("");
+                    binding.etDrop1.setText("");
                 }
             }
         });
@@ -79,16 +99,19 @@ public class Bookservice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 BookServiceModel model = new BookServiceModel();
-//                model.setLocation(binding.etLocation.getText().toString().trim());
-//                model.setSelectedDate(binding.tvSelectedDate.getText().toString().trim());
-//                model.setSelectedTime(binding.tvSelectedTime.getText().toString().trim());
-                // previous implementation
+
                 String location = binding.etLocation.getText().toString().trim();
                 String selectedDate = binding.tvSelectedDate.getText().toString().trim();
                 String selectedTime = binding.tvSelectedTime.getText().toString().trim();
+                String pUpLoc = binding.etPickUp.getText().toString().trim();
+//                String pDropLoc = binding.etDrop1.getText().toString().trim();
+
                 model.setLocation(location);
                 model.setSelectedDate(selectedDate);
                 model.setSelectedTime(selectedTime);
+                model.setPickUpLoc(pUpLoc);
+//                model.setDropLoc(pDropLoc);
+                model.setDropLoc(binding.etDrop1.getText().toString());
 
                 if (location.isEmpty() || selectedDate.isEmpty() || selectedTime.isEmpty()) {
                     Toast.makeText(Bookservice.this, "Please fill in all the details", Toast.LENGTH_SHORT).show();

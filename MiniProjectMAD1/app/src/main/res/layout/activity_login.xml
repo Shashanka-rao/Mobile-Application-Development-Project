@@ -52,7 +52,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="80dp"
         android:layout_marginBottom="400dp"
-        android:text="Please fill the input below here"
+        android:text="Please fill the credentials carefully :)"
         android:textColor="#AEA3A3"
         android:textSize="12dp" />
 

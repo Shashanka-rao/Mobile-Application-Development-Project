@@ -2,7 +2,7 @@
     <string name="app_name">My Mini Project</string>
     <string-array name="dropdown_options">
         <item></item>
-        <!--    <item>Option 2</item>-->
+        <item></item>
         <!--    <item>Option 3</item>-->
     </string-array>
 </resources>
