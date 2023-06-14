@@ -5,7 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#220130"
-    tools:context=".Bookservice">
+    tools:context=".MainClasses.Bookservice">
+
+    <TextView
+        android:id="@+id/SelectedTimeDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="210dp"
+        android:text="Selected Time: "
+        android:textSize="20dp"
+        android:visibility="invisible"/>
 
     <TextView
         android:id="@+id/textView"
@@ -16,7 +28,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="48dp"
         android:layout_marginEnd="51dp"
-        android:layout_marginBottom="538dp"
+        android:layout_marginBottom="600dp"
         android:text="Book Service"
         android:textAlignment="center"
         android:textColor="#23F1E5"
@@ -26,19 +38,19 @@
     <EditText
         android:id="@+id/etLocation"
         android:layout_width="wrap_content"
-        android:layout_height="53dp"
+        android:layout_height="55dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="425dp"
+        android:layout_marginBottom="530dp"
         android:background="@drawable/edittextradius"
         android:backgroundTint="#7E638C"
         android:drawableStart="@drawable/baseline_add_location_alt_24"
         android:drawablePadding="5dp"
         android:ems="10"
-        android:hint="Location"
+        android:hint="Enter Your Location"
         android:inputType="text"
         android:padding="8dp"
         android:text=""
@@ -72,7 +84,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="300dp"
+        android:layout_marginBottom="350dp"
         android:backgroundTint="#7E638C"
         android:text="Select Date"
         android:background="@drawable/edittextradius"
@@ -87,12 +99,12 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="234dp"
-        android:layout_marginBottom="267dp"
-        android:text="Selected Date: "
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="315dp"
+        android:text=""
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:visibility="gone" />
+        android:visibility="invisible" />
 
     <Button
         android:id="@+id/btnSelectTime"
@@ -103,7 +115,7 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="200dp"
+        android:layout_marginBottom="250dp"
         android:backgroundTint="#7E638C"
         android:text="Select Time"
         android:background="@drawable/edittextradius"
@@ -112,19 +124,17 @@
 
     <TextView
         android:id="@+id/tvSelectedTime"
-        android:layout_width="184dp"
-        android:layout_height="42dp"
-        android:layout_alignParentStart="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="53dp"
         android:layout_marginTop="100dp"
-        android:layout_marginEnd="174dp"
-        android:layout_marginBottom="149dp"
-        android:text="Selected Time: "
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="210dp"
+        android:text=""
         android:textColor="#FFFFFF"
         android:textSize="18sp"
-        android:visibility="gone" />
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/backButtonBS"
@@ -138,4 +148,45 @@
         android:layout_marginBottom="671dp"
         android:backgroundTint="#220130"
         app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+    <CheckBox
+        android:id="@+id/checkBox"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="450dp"
+        android:background="@drawable/buttonradius"
+        android:backgroundTint="#7E638C"
+        android:text="Do you wish to opt pick up/drop?"
+        android:textColor="@color/white" />
+
+    <TextView
+        android:id="@+id/SelectedDateDisplay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="315dp"
+        android:text="Selected Date: "
+        android:textSize="20dp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/driverTV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="410dp"
+        android:text="Driver Name: Suresh \nContact No. : 9475723554"
+        android:textColor="@color/white"
+        android:visibility="invisible"/>
 </RelativeLayout>

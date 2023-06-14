@@ -1,9 +1,8 @@
-package com.example.miniprojectmad1;
+package com.example.miniprojectmad1.MainClasses;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -14,13 +13,12 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.miniprojectmad1.databinding.ActivityLoginBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
+import com.example.miniprojectmad1.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
 
@@ -29,6 +27,7 @@ public class Login extends AppCompatActivity {
     Button loginButton;
     TextView signUpButton;
     ImageButton backButton;
+    int checkUser;
     private FirebaseAuth auth;
 
     @Override
@@ -44,13 +43,29 @@ public class Login extends AppCompatActivity {
         signUpButton = findViewById(R.id.signUpButton);
         loginButton = findViewById(R.id.loginButton);
         auth = FirebaseAuth.getInstance();
+        FirebaseUser user = auth.getCurrentUser();
 
 
-        if(auth.getCurrentUser()!=null)
+        if(user!=null)
         {
-            Intent intent = new Intent(Login.this,Home.class);
-            startActivity(intent);
+            String email = user.getEmail();
+//            String uid = user.getUid();
+
+            // Do something with the user's email and UID
+            // For example, you can display them or use them for further processing
+//            System.out.println("Email: " + email);
+//            System.out.println("UID: " + uid);
+            if(email.equals("Manager1@services.com")) {
+                Intent intent = new Intent(Login.this, HomeManager.class);
+                startActivity(intent);
+            }
+            else{
+                Intent intent = new Intent(Login.this, Home.class);
+                startActivity(intent);
+            }
         }
+
+
         //start here
 
        loginButton.setOnClickListener(new View.OnClickListener() {
@@ -70,15 +85,12 @@ public class Login extends AppCompatActivity {
             }
         });
 
-
-
         //end here
 
        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(Login.this,MainActivity.class);
-                startActivity(intent);
+                onBackPressed();
             }
         });
         signUpButton.setOnClickListener(new View.OnClickListener() {
@@ -95,10 +107,18 @@ public class Login extends AppCompatActivity {
             @Override
             public void onSuccess(AuthResult authResult) {
                 Toast.makeText(Login.this, "Login successful", Toast.LENGTH_SHORT).show();
-                Intent intent2 = new Intent(Login.this,Home.class);
-                intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
-//              startActivity(new Intent(Login.this, Home.class));
-                startActivity(intent2);
+                if(!email.equals("Manager1@services.com") && !password.equals("Mad#12345"))
+                {
+                    Intent intent2 = new Intent(Login.this,Home.class);
+                    intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent2);
+
+                }
+                else {
+                    Intent intent1 = new Intent(Login.this, HomeManager.class);
+                    intent1.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+                    startActivity(intent1);
+                }
             }
         });
 
@@ -109,6 +129,11 @@ public class Login extends AppCompatActivity {
             }
         });
 
+    }
+    @Override
+    public void onBackPressed() {
+        finish();
+        super.onBackPressed();
     }
 
 }

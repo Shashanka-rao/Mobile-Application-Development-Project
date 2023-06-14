@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#220130"
-    tools:context=".Home">
+    tools:context=".MainClasses.Home">
 
 
     <TextView
@@ -14,17 +14,26 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="168dp"
-        android:layout_marginBottom="11dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="15dp"
         android:text="New vehicle"
         android:textColor="#23F1E5" />
 
+    <!--        android:="@drawable/baseline_keyboard_arrow_down_24"-->
+
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="150dp"
+        android:layout_height="75dp"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="489dp"
-        android:orientation="horizontal"></LinearLayout>
+        android:layout_marginBottom="516dp"
+        android:orientation="horizontal">
+
+        <Spinner
+            android:id="@+id/spinnerNewReg"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1" />
+    </LinearLayout>
 
     <ImageView
         android:id="@+id/carImage"
@@ -32,8 +41,8 @@
         android:layout_height="270dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="217dp"
+        android:layout_marginEnd="45dp"
+        android:layout_marginBottom="219dp"
         app:srcCompat="@drawable/baseline_car_repair_24" />
 
     <TextView
@@ -53,11 +62,13 @@
     <Button
         android:id="@+id/logoutButton"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="306dp"
-        android:layout_marginBottom="664dp"
+        android:layout_marginBottom="800dp"
         android:background="@drawable/buttonradius"
         android:text="logout" />
 
@@ -93,8 +104,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="26dp"
+        android:layout_marginBottom="15dp"
         android:text="Contact us"
         android:textColor="#23F1E5" />
 
@@ -102,10 +113,12 @@
         android:id="@+id/notificationBtn"
         android:layout_width="41dp"
         android:layout_height="46dp"
+        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
         android:layout_marginEnd="20dp"
-        android:layout_marginBottom="665dp"
+        android:layout_marginBottom="800dp"
         app:srcCompat="@drawable/baseline_notifications_24" />
 
     <LinearLayout
@@ -118,6 +131,13 @@
 
 
         <ImageView
+            android:id="@+id/imageViewHome"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            app:srcCompat="@drawable/baseline_home_24" />
+
+        <ImageView
             android:id="@+id/dashBoardBtn"
             android:layout_width="wrap_content"
             android:layout_height="39dp"
@@ -125,7 +145,7 @@
             app:srcCompat="@drawable/baseline_dashboard_24" />
 
         <ImageView
-            android:id="@+id/addNewvehicleBtn"
+            android:id="@+id/addNewVehicleBtn"
             android:layout_width="10dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -146,9 +166,22 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="40dp"
-        android:layout_marginBottom="10dp"
+        android:layout_marginStart="122dp"
+        android:layout_marginBottom="15dp"
         android:text="Dashboard"
+        android:textColor="#23F1E5" />
+
+    <TextView
+        android:id="@+id/homeEt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="35dp"
+        android:layout_marginEnd="329dp"
+        android:layout_marginBottom="15dp"
+        android:text="Home"
         android:textColor="#23F1E5" />
 
     <TextView
@@ -163,5 +196,19 @@
         android:textColor="#23F1E5"
         android:textSize="34sp"
        />
+
+    <EditText
+        android:id="@+id/newRegNo"
+        android:layout_width="338dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="80dp"
+        android:layout_marginBottom="476dp"
+        android:ems="10"
+        android:inputType="text"
+        android:text=""
+        android:hint="New Reg No."
+        android:textColorHint="@color/white"/>
 
 </RelativeLayout>

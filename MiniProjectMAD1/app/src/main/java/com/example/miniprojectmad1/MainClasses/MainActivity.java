@@ -1,15 +1,14 @@
-package com.example.miniprojectmad1;
+package com.example.miniprojectmad1.MainClasses;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
-import com.example.miniprojectmad1.databinding.ActivityMainBinding;
+import com.example.miniprojectmad1.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
@@ -28,14 +27,6 @@ public class MainActivity extends AppCompatActivity {
 
         signInButton = findViewById(R.id.signInButton);
         signUpButton = findViewById(R.id.signUpButton);
-
-//
-//        String CurUser = auth.getCurrentUser().toString();
-//
-//        if(CurUser==null) {
-//            Intent intent = new Intent(MainActivity.this,Home.class);
-//            startActivity(intent);
-//        }
 
 //        if(auth.getCurrentUser()!=null)
 //        {
@@ -58,13 +49,6 @@ public class MainActivity extends AppCompatActivity {
             });
 
         }
-
-
-
-//            startActivity(new Intent(MainActivity.this, Home.class));
-
-
-
     }
 
 //android:background="#220130"
