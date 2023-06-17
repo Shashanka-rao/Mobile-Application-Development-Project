@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -7,18 +7,20 @@
     android:background="#220130"
     tools:context=".MainClasses.HomeManager">
 
+
     <Button
         android:id="@+id/logoutButtonMan"
         android:layout_width="wrap_content"
-        android:layout_height="20dp"
+        android:layout_height="25dp"
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="306dp"
-        android:layout_marginBottom="800dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="30dp"
         android:background="@drawable/buttonradius"
-        android:text="logout" />
+        android:text="logout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/ManTv"
@@ -26,100 +28,65 @@
         android:layout_height="68dp"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="79dp"
-        android:layout_marginBottom="524dp"
+        android:layout_marginTop="100dp"
+        android:layout_marginEnd="70dp"
         android:text="Hello Manager!"
         android:textColor="#23F1E5"
-        android:textSize="40dp" />
-
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/logoutButtonMan" />
 
     <ImageView
         android:id="@+id/imageView10"
-        android:layout_width="206dp"
-        android:layout_height="150dp"
+        android:layout_width="205dp"
+        android:layout_height="203dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="101dp"
-        android:layout_marginEnd="100dp"
-        android:layout_marginBottom="286dp"
+        android:layout_marginTop="43dp"
+        android:layout_marginEnd="97dp"
         android:background="#23F1E5"
         android:src="@drawable/management"
-        />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ManTv" />
 
     <LinearLayout
-        android:layout_width="405dp"
-        android:layout_height="40dp"
+        android:layout_width="101dp"
+        android:layout_height="61dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="0dp"
-        android:layout_marginEnd="0dp"
-        android:layout_marginBottom="45dp"
-        android:background="#23F1E5"
-        android:orientation="horizontal">
+        android:layout_marginStart="200dp"
+        android:layout_marginEnd="200dp"
+        android:layout_marginBottom="100dp"
+        android:background="@drawable/buttonradius"
+        android:orientation="horizontal"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
 
         <ImageView
             android:id="@+id/viewBookingsBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="fitCenter"
             android:src="@drawable/viewbokkings" />
 
-        <ImageView
-            android:id="@+id/billEntryBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/bill" />
-
-        <ImageView
-            android:id="@+id/updateSSBtn"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:src="@drawable/changes" />
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <TextView
+        android:id="@+id/viewVBooking"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="0dp"
+        android:layout_marginEnd="159dp"
+        android:layout_marginBottom="65dp"
         android:layout_weight="1"
-        android:orientation="horizontal">
-
-        <TextView
-            android:id="@+id/tvViewBookings"
-            android:layout_width="123dp"
-            android:layout_height="match_parent"
-
-            android:text="View bookings"
-            android:textAlignment="center"
-            android:textColor="#23F1E5"
-            android:textSize="18dp" />
-
-        <TextView
-            android:id="@+id/tvBillEntry"
-            android:layout_width="123dp"
-            android:layout_height="match_parent"
-
-            android:text="Bill Entry"
-            android:textAlignment="center"
-            android:textColor="#23F1E5"
-            android:textSize="18dp" />
-
-        <TextView
-            android:id="@+id/tvUpdateSS"
-            android:layout_width="123dp"
-            android:layout_height="match_parent"
-
-            android:text="Update Service Status"
-            android:textAlignment="center"
-            android:textColor="#23F1E5"
-            android:textSize="18dp" />
-    </LinearLayout>
+        android:text="View Bookings"
+        android:textColor="#23F1E5"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
 
-</RelativeLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,8 +1,10 @@
 package com.example.miniprojectmad1.MainClasses;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
@@ -12,12 +14,23 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.miniprojectmad1.Models.BookServiceModel;
+import com.example.miniprojectmad1.Models.ServiceHistoryModel;
+import com.example.miniprojectmad1.Models.UserCreationModel;
+import com.example.miniprojectmad1.Models.ViewBookingManagerModel;
 import com.example.miniprojectmad1.R;
 import com.example.miniprojectmad1.databinding.ActivityBookserviceBinding;
-import com.example.miniprojectmad1.trackService;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
 
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Locale;
 
@@ -30,16 +43,48 @@ public class Bookservice extends AppCompatActivity {
     private SimpleDateFormat dateFormatter = new SimpleDateFormat("dd/MM/yyyy", Locale.getDefault());
     private SimpleDateFormat timeFormatter = new SimpleDateFormat("hh:mm a", Locale.getDefault());
 
-    private CheckBox checkBox;
+    private CheckBox checkBoxPD;
+    ArrayList<UserCreationModel> list;
     EditText etDrop1;
-
-
+    FirebaseAuth auth;
+    FirebaseDatabase database = FirebaseDatabase.getInstance();
+    public String vehicleRegU,currentUid,userNameU;
+    
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityBookserviceBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         etDrop1 = findViewById(R.id.etDrop1);
+        list = new ArrayList<>();
+
+
+        auth = FirebaseAuth.getInstance();
+        if (auth.getCurrentUser() != null) {
+           currentUid = auth.getCurrentUser().getUid();
+        }
+
+        DatabaseReference reference = database.getReference().child("Users").child("UserData");
+        //fetch email
+        reference.addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot snapshot) {
+                for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
+                    UserCreationModel user = dataSnapshot.getValue(UserCreationModel.class);
+                    if(currentUid.equals(dataSnapshot.child("userId").getValue()))
+                    {
+                        vehicleRegU = user.getvRegNo();
+                        userNameU = user.getUsername();
+                        break;
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError error) {
+
+            }
+        });
 
 //   Back button
      binding.backButtonBS.setOnClickListener(new View.OnClickListener() {
@@ -66,7 +111,7 @@ public class Bookservice extends AppCompatActivity {
         });
 
         //checkbox
-        binding.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+        binding.checkBoxPD.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked)
@@ -104,21 +149,35 @@ public class Bookservice extends AppCompatActivity {
                 String selectedDate = binding.tvSelectedDate.getText().toString().trim();
                 String selectedTime = binding.tvSelectedTime.getText().toString().trim();
                 String pUpLoc = binding.etPickUp.getText().toString().trim();
-//                String pDropLoc = binding.etDrop1.getText().toString().trim();
+                String pDropLoc = binding.etDrop1.getText().toString().trim();
 
                 model.setLocation(location);
                 model.setSelectedDate(selectedDate);
                 model.setSelectedTime(selectedTime);
                 model.setPickUpLoc(pUpLoc);
-//                model.setDropLoc(pDropLoc);
-                model.setDropLoc(binding.etDrop1.getText().toString());
+                model.setDropLoc(pDropLoc);
+                model.setUserIdBook(currentUid);
+                model.setUserNameB(userNameU);
+                model.setvRegNoB(vehicleRegU);
 
                 if (location.isEmpty() || selectedDate.isEmpty() || selectedTime.isEmpty()) {
                     Toast.makeText(Bookservice.this, "Please fill in all the details", Toast.LENGTH_SHORT).show();
-                } else {
-                    // Process the booking (e.g., save to a database, send to server, etc.)
-                    FirebaseDatabase.getInstance().getReference().child("Booking").push().setValue(model);
-                    Toast.makeText(Bookservice.this, "Booking confirmed", Toast.LENGTH_SHORT).show();
+                }
+                else {
+                FirebaseDatabase.getInstance().getReference("Users").child("Booking").push().setValue(model);
+                Toast.makeText(Bookservice.this, "Booking confirmed", Toast.LENGTH_SHORT).show();
+
+                    //to clear after submission
+                    //checkbox
+                    binding.checkBoxPD.performClick();
+                    // time
+                    binding.SelectedTimeDisplay.setVisibility(View.INVISIBLE);
+                    binding.tvSelectedTime.setVisibility(View.INVISIBLE);
+                    //date
+                    binding.SelectedDateDisplay.setVisibility(View.INVISIBLE);
+                    binding.tvSelectedDate.setVisibility(View.INVISIBLE);
+                    //Location
+                    binding.etLocation.setText("");
                 }
             }
         });

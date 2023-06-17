@@ -48,6 +48,9 @@ public class UserCreation extends AppCompatActivity {
 
         auth = FirebaseAuth.getInstance();
         database = FirebaseDatabase.getInstance();
+
+        //uid
+//        String uidR =auth.getCurrentUser().getUid();
         //start here
 
        signUpButton.setOnClickListener(new View.OnClickListener() {
@@ -98,10 +101,10 @@ public class UserCreation extends AppCompatActivity {
                     model.setUsername(binding.usernameSU.getText().toString().trim());
                     model.setMobileNo(binding.mobileNoSU.getText().toString().trim());
                     model.setvRegNo(binding.VRegNoSU.getText().toString().trim());
-                    model.setEmail(email);
+                    model.setUserId(auth.getUid());
 
 
-                    database.getReference().child("Users").push().setValue(model);
+                    database.getReference().child("Users").child("UserData").push().setValue(model);
                     Toast.makeText(UserCreation.this, "User Created", Toast.LENGTH_SHORT).show();
                     auth.signOut();
                     Intent intent = new Intent(UserCreation.this, MainActivity.class);

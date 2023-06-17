@@ -1,8 +1,191 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#220130"
-    tools:context=".trackService"/>
+    tools:context=".MainClasses.trackService">
+
+    <TextView
+        android:id="@+id/tvHeading"
+        android:layout_width="413dp"
+        android:layout_height="107dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="10dp"
+        android:background="#220130"
+        android:padding="25dp"
+        android:text="TRACK SERVICE"
+        android:textAlignment="center"
+        android:textColor="#23F1E5"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:layout_width="183dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="26dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <CheckBox
+            android:id="@+id/cbVehicleInU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#7E638C"
+            android:buttonTint="#23F1E5"
+            android:text="Vehicle In"
+            android:textColor="#FFFFFF"
+            android:textSize="20sp" />
+
+        <CheckBox
+            android:id="@+id/cbROOpenU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#7E638C"
+            android:buttonTint="#23F1E5"
+            android:text="RO Open"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+
+        <CheckBox
+            android:id="@+id/cbInServiceU"
+            android:layout_width="match_parent"
+            android:layout_height="68dp"
+            android:background="#7E638C"
+            android:buttonTint="#23F1E5"
+            android:text="In Service"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+
+        <CheckBox
+            android:id="@+id/cbQualityCheckU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#7E638C"
+            android:buttonTint="#23F1E5"
+            android:text="Quality Check"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+
+        <CheckBox
+            android:id="@+id/cbWashingU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#7E638C"
+            android:buttonTint="#23F1E5"
+            android:text="Washing"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+
+        <CheckBox
+            android:id="@+id/cbDOneU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#7E638C"
+            android:buttonTint="#23F1E5"
+            android:drawableTint="#000000"
+            android:text="Vehicle Ready"
+            android:textColor="#FFFFFF"
+            android:textSize="18dp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="230dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginEnd="45dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/tvCVehicleInU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#220130"
+            android:buttonTint="#23F1E5"
+            android:text="PENDING"
+            android:paddingTop="20dp"
+            android:textColor="#23F1E5"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCROOpenU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#220130"
+            android:buttonTint="#23F1E5"
+            android:text="PENDING"
+            android:paddingTop="20dp"
+            android:textColor="#23F1E5"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCInServiceU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#220130"
+            android:buttonTint="#23F1E5"
+            android:text="PENDING"
+            android:paddingTop="20dp"
+            android:textColor="#23F1E5"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCQualityCheckU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#220130"
+            android:buttonTint="#23F1E5"
+            android:text="PENDING"
+            android:paddingTop="20dp"
+            android:textColor="#23F1E5"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCWashingU"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="#220130"
+            android:buttonTint="#23F1E5"
+            android:text="PENDING"
+            android:paddingTop="20dp"
+            android:textColor="#23F1E5"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tvCDoneU"
+            android:layout_width="match_parent"
+            android:layout_height="69dp"
+            android:background="#220130"
+            android:buttonTint="#23F1E5"
+            android:paddingTop="20dp"
+            android:text="PENDING"
+            android:textColor="#23F1E5"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

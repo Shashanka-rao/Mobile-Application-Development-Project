@@ -7,4 +7,28 @@
     tools:context=".MainClasses.ViewBookingManager"
     android:background="#220130">
 
+    <TextView
+        android:id="@+id/headingtv"
+        android:layout_width="412dp"
+        android:layout_height="79dp"
+        android:layout_marginTop="50dp"
+        android:text="Bookings"
+        android:textAlignment="center"
+        android:textColor="#23F1E5"
+        android:textSize="48sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvBooking"
+        android:layout_width="402dp"
+        android:layout_height="533dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

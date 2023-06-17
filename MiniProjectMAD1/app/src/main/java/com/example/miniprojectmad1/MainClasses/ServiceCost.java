@@ -29,8 +29,6 @@ public class ServiceCost extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-
-
         binding = ActivityServiceCostBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         super.onCreate(savedInstanceState);
@@ -44,7 +42,7 @@ public class ServiceCost extends AppCompatActivity {
         adapter = new ServiceCostAdapter(this,list);
         binding.serviceCRecycleV.setAdapter(adapter);
 
-        database.getReference().child("serviceNo").addValueEventListener(new ValueEventListener() {
+        database.getReference().child("Services").child("Bills").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 list.clear();

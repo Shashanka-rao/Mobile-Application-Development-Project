@@ -30,8 +30,8 @@ public class ServiceHistoryAdapter extends RecyclerView.Adapter<ServiceHistoryAd
     @NonNull
     @Override
     public MyViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-       View v = LayoutInflater.from(context).inflate(R.layout.servicehistory_item,parent,false);
-       return new MyViewHolder(v);
+        View v = LayoutInflater.from(context).inflate(R.layout.servicehistory_item,parent,false);
+        return new MyViewHolder(v);
 
     }
 

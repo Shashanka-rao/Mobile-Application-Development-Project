@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="6dp"
+    app:cardUseCompatPadding="true">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="15dp"
+        android:backgroundTint="#220130">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/buttonradius"
+            android:backgroundTint="#292829"
+            android:orientation="vertical"
+            android:padding="10dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/usNameBooked"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:layout_margin="2.5dp"
+                    android:layout_weight="1"
+                    android:text="Username: "
+                    android:textColor="#23F1E5"
+                    android:textSize="18dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/regNoBooked"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Reg No. :"
+                        android:textColor="#23F1E5"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/tvFetchRegNo"
+                        android:layout_width="272dp"
+                        android:layout_height="match_parent"
+                        android:backgroundTint="#220130"
+                        android:padding="4dp"
+                        android:text="ST-DI-SE-NO"
+                        android:textColor="#23F1E5" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tvServiceCenter"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:text="Service Center : "
+                    android:textColor="#23F1E5"
+                    android:textSize="16dp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvPickUp"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:text="PickUp: Not Opted "
+                        android:textColor="#23F1E5"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvDropOff"
+                        android:layout_width="150dp"
+                        android:layout_height="40dp"
+                        android:text="DropOff : Not Opted "
+                        android:textColor="#23F1E5"
+                        android:textSize="16dp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/tvDateATime"
+                        android:layout_width="130dp"
+                        android:layout_height="30dp"
+                        android:text="Date and Time : "
+                        android:textColor="#23F1E5"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvDateValue"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="DD-MM-YYYY"
+                        android:textAlignment="center"
+                        android:textColor="#23F1E5"
+                        android:textSize="16dp" />
+
+                    <TextView
+                        android:id="@+id/tvTimeValue"
+                        android:layout_width="100dp"
+                        android:layout_height="30dp"
+                        android:text="Time"
+                        android:textAlignment="center"
+                        android:textColor="#23F1E5"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/trackSSBtn"
+                android:layout_width="200dp"
+                android:layout_height="30dp"
+                android:layout_marginStart="75dp"
+                android:background="@drawable/buttonradius"
+                android:text="Track Status"
+                android:textAlignment="center"
+                android:textColor="#292829" />
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

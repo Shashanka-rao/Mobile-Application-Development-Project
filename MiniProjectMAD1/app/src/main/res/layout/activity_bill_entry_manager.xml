@@ -1,368 +1,467 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:backgroundTint="#220130"
-    android:layout_marginTop="0dp"
-    android:layout_marginBottom="0dp">
+    android:layout_height="match_parent"
+    android:background="#292829">
 
+    <androidx.cardview.widget.CardView
+        android:layout_width="384dp"
+        android:layout_height="571dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="16dp"
+        android:background="@drawable/round_radius"
+        app:cardCornerRadius="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20">
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="50dp"
-        android:orientation="horizontal">
-
-
-        <TextView
-            android:id="@+id/textView13"
+        <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="Bill entry"
-            android:textAlignment="center"
-            android:textColor="#23F1E5"
-            android:textSize="60dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="473dp"
-        android:layout_marginTop="200dp"
-        android:layout_marginBottom="150dp"
-        android:background="#7E638C"
-        android:orientation="vertical">
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:background="#220130"
-            android:orientation="vertical">
+            android:layout_height="match_parent"
+            android:background="#FFFFFF"
+            tools:context=".ManagerViewOfBill">
 
             <TextView
-                android:id="@+id/DisplayKms"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
+                android:id="@+id/Username"
+                android:layout_width="105dp"
+                android:layout_height="34dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="16dp"
+                android:text="Username"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/URegNo"
+                android:layout_width="117dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="20dp"
+                android:text="Vehicle Reg. No"
+                android:textColor="#000000"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/Username" />
+
+            <TextView
+                android:id="@+id/kms"
+                android:layout_width="82dp"
+                android:layout_height="38dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="5dp"
+                android:text="Kms"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/URegNo" />
+
+            <TextView
+                android:id="@+id/Date"
+                android:layout_width="79dp"
+                android:layout_height="40dp"
+                android:layout_marginStart="31dp"
+                android:layout_marginTop="5dp"
+                android:text="Date"
+                android:textColor="#000000"
+                android:textSize="20sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/kms" />
+
+            <EditText
+                android:id="@+id/BillMUsername"
+                android:layout_width="208dp"
+                android:layout_height="42dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:ems="10"
+                android:hint="enter user name"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textColorHint="#999999"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <EditText
+                android:id="@+id/BillMVRegNo"
+                android:layout_width="214dp"
+                android:layout_height="47dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="10dp"
+                android:ems="10"
+                android:hint="enter registration number"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textColorHint="#999999"
+                android:textSize="16sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BillMUsername" />
+
+            <EditText
+                android:id="@+id/BillMKms"
+                android:layout_width="90dp"
+                android:layout_height="40dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="134dp"
+                android:ems="10"
+                android:hint="distance"
+                android:textSize="16dp"
+                android:inputType="text"
+                android:textColor="#000000"
+                android:textColorHint="#999999"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BillMVRegNo" />
+
+            <EditText
+                android:id="@+id/BillMDate"
+                android:layout_width="163dp"
+                android:layout_height="39dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginEnd="61dp"
+                android:ems="10"
+                android:hint="DD-MM-YYYY"
+                android:inputType="text"
+                android:textSize="18dp"
+                android:textColor="#000000"
+                android:textColorHint="#999999"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/BillMKms" />
+
+            <LinearLayout
+                android:layout_width="387dp"
+                android:layout_height="280dp"
+                android:layout_marginBottom="80dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/service"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#efefef"
+                        android:text="Service"
+                        android:paddingTop="10dp"
+                        android:textAlignment="center"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/description"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#efefef"
+                        android:text="Description"
+                        android:paddingTop="10dp"
+                        android:textAlignment="center"
+                        android:textColor="#333333" />
+
+                    <TextView
+                        android:id="@+id/price"
+                        android:layout_width="70dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:background="#efefef"
+                        android:text="Price"
+                        android:paddingTop="10dp"
+                        android:textAlignment="center"
+                        android:textColor="#333333" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/RSService"
+                        android:layout_width="210dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="Routine Service"
+
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/rsDesp"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Nil"
+                        android:inputType="text"
+                        android:textSize="16dp"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/rsPrice"
+                        android:layout_width="210dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="0.00"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="16dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/editTextText11"
+                        android:layout_width="211dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="New Parts"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/npDesp"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Nil"
+                        android:textSize="16dp"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/npPrice"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="0.00"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000"
+                        android:textSize="16dp"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/editTextText13"
+                        android:layout_width="211dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="Oil Changes"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/ocDesp"
+                        android:layout_width="210dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Nil"
+                        android:textSize="16dp"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/ocPrice"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textSize="16dp"
+                        android:ems="10"
+                        android:hint="0.00"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/editTextText15"
+                        android:layout_width="211dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="Washing"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/wDesp"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Nil"
+                        android:textSize="16dp"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/wPrice"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textSize="16dp"
+                        android:hint="0.00"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/editTextText17"
+                        android:layout_width="210dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:text="Labour"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/lDesp"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:hint="Nil"
+                        android:textSize="16dp"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+
+                    <EditText
+                        android:id="@+id/lPrice"
+                        android:layout_width="210dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:ems="10"
+                        android:textSize="16dp"
+                        android:hint="0.00"
+                        android:inputType="text"
+                        android:textAlignment="center"
+                        android:textColor="#000000" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/Total"
+                        android:layout_width="85dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#efefef"
+                        android:text="Total"
+                        android:textAlignment="center"
+                        android:textColor="#008EFF"
+                        android:textSize="20dp" />
+
+                    <TextView
+                        android:id="@+id/etTotal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#efefef"
+                        android:ems="10"
+                        android:inputType="text"
+                        android:paddingEnd="20dp"
+                        android:text="0.00"
+                        android:textAlignment="textEnd"
+                        android:textColor="#008EFF"
+                        android:textSize="20dp" />
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/calculateTotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="75dp"
+                android:layout_marginBottom="19dp"
                 android:background="@drawable/buttonradius"
-                android:backgroundTint="#292329"
-                android:text="kms"
-                android:textAlignment="center"
-                android:textColor="#23F1E5"
-                android:textSize="40dp" />
-        </LinearLayout>
+                android:backgroundTint="#2BC48A"
+                android:text="generate total"
+                android:textSize="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tvDescription"
+            <Button
+                android:id="@+id/saveButton"
                 android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Description"
-                android:textAlignment="center"
-                android:textColor="#00FFFF"
-                android:textSize="22dp" />
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="75dp"
+                android:layout_marginBottom="19dp"
+                android:background="@drawable/buttonradius"
+                android:backgroundTint="#2BC48A"
+                android:text="SAVE"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
-            <TextView
-                android:id="@+id/tvPrice"
-                android:layout_width="92dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Price"
-                android:textAlignment="center"
-                android:textColor="#00FFFF"
-                android:textSize="22dp" />
-
-            <TextView
-                android:id="@+id/tvQty"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Quantity"
-                android:textAlignment="center"
-                android:textColor="#00FFFF"
-                android:textSize="22dp" />
-
-            <TextView
-                android:id="@+id/tvTotal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Sub Total"
-                android:textAlignment="center"
-                android:textColor="#00FFFF"
-                android:textSize="22dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tvEngineOil"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Engine Oil"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvEOPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="300"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvEOQty"
-                android:layout_width="34dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="2"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvEOTotal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="600"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tvBrakeFluid"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Brake Fluid"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvBFPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="350"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvBFQty"
-                android:layout_width="34dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="1"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvBFTotal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="350"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tvGearOil"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Gear Oil"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvGOPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="200"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvGOQty"
-                android:layout_width="34dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="1"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvGOTotal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="200"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tvSeatCushion"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Seat Cushion"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvSCPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="750"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvSCQty"
-                android:layout_width="34dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="3"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvSCTotal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="2250"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="55dp"
-            android:orientation="horizontal">
-
-            <TextView
-                android:id="@+id/tvWash"
-                android:layout_width="50dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="Washing"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvWPrice"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="250"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvWQty"
-                android:layout_width="34dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="1"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-
-            <TextView
-                android:id="@+id/tvWTotal"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:text="250"
-                android:textAlignment="center"
-                android:textColor="#000000"
-                android:textSize="18dp" />
-        </LinearLayout>
-
-        <TextView
-            android:id="@+id/tvBillDate"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:paddingLeft="30dp"
-            android:text="Date :"
-            android:textColor="#00FFFF"
-            android:textSize="28dp" />
-
-        <TextView
-            android:id="@+id/tvTotalPrice"
-            android:layout_width="match_parent"
-            android:layout_height="51dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentBottom="true"
-            android:paddingLeft="30dp"
-            android:text="Total : Rs "
-            android:textColor="#00FFFF"
-            android:textSize="28sp" />
-
-    </LinearLayout>
+    </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/usTv"
-        android:layout_width="match_parent"
-        android:layout_height="57dp"
-        android:layout_marginTop="140dp"
-        android:layout_weight="1"
-        android:text="Username :  - Reg No. :"
+        android:id="@+id/textView20"
+        android:layout_width="410dp"
+        android:layout_height="137dp"
+        android:background="@drawable/round_radius"
+        android:backgroundTint="#007BFF"
+        android:text="SERVICE BILL"
+        android:padding="35dp"
         android:textAlignment="center"
-        android:textColor="#23F1E5"
-        android:textSize="20dp" />
-</androidx.cardview.widget.CardView>
+        android:textColor="#ffffff"
+        android:textSize="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

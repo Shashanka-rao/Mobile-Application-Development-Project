@@ -106,9 +106,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginEnd="26dp"
+        android:layout_marginEnd="40dp"
         android:layout_marginBottom="15dp"
-        android:text="Contact us"
+        android:text="Contacts"
         android:textColor="#23F1E5" />
 
     <ImageView
@@ -133,7 +133,7 @@
 
 
         <ImageView
-            android:id="@+id/imageViewHome"
+            android:id="@+id/HomeBtn"
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
@@ -161,7 +161,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="178dp"
+        android:layout_marginStart="170dp"
         android:layout_marginBottom="15dp"
         android:text="Dashboard"
         android:textColor="#23F1E5" />
@@ -173,7 +173,7 @@
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="53dp"
+        android:layout_marginStart="50dp"
         android:layout_marginEnd="311dp"
         android:layout_marginBottom="15dp"
         android:text="Home"
@@ -193,3 +193,24 @@
        />
 
 </RelativeLayout>
+
+<!--1-->
+<!--
+ android:textColor="#011627" //blackish
+ android:textColor="#fdfffc" //whitish
+ android:textColor="#2ec4b6" //greenish
+ android:textColor="#e71d36" //reddish
+ android:textColor="#ff9f1c" //orangish
+ android:textColor="#f5f3f4" //white fade
+
+-->
+<!--2-->
+    <!--
+ android:textColor="#30343f" //blackish
+ android:textColor="#fafaff" //whitish
+ android:textColor="#e4d9ff" //light purple
+ android:textColor="#273469" //dark blue
+ android:textColor="#1e2749" //too dark blue
+ android:textColor="#f5f3f4" //white fade
+
+-->

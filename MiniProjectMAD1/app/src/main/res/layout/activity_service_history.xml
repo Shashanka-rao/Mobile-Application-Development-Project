@@ -31,7 +31,7 @@
         android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/ServiceHistory"
+        android:id="@+id/rvServiceHistory"
         android:layout_width="match_parent"
         android:layout_height="497dp"
         android:background="#220130" />

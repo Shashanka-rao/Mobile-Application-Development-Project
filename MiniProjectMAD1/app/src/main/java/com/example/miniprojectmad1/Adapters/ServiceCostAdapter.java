@@ -35,7 +35,23 @@ public class ServiceCostAdapter extends RecyclerView.Adapter<ServiceCostAdapter.
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ServiceCostModel user = list.get(position);
-        holder.DisplayKms.setText(user.getKmsIn()+"km");
+        holder.BillMKmsU.setText(user.getKmsIn()+"km");
+        holder.BillMDateU.setText(user.getDateIn());
+        //desp
+        holder.rsDespU.setText(user.getRsDesp());
+        holder.npDespU.setText(user.getNpDesp());
+        holder.ocDespU.setText(user.getOcDesp());
+        holder.wDespU.setText(user.getwDesp());
+        holder.lDespU.setText(user.getlDesp());
+        //price
+        holder.rsPriceU.setText(user.getRsPrice());
+        holder.npPriceU.setText(user.getNpPrice());
+        holder.ocPriceU.setText(user.getOcPrice());
+        holder.wPriceU.setText(user.getwPrice());
+        holder.lPriceU.setText(user.getlPrice());
+        //total
+        holder.etTotalU.setText(user.getBillIn());
+
     }
 
     @Override
@@ -45,10 +61,22 @@ public class ServiceCostAdapter extends RecyclerView.Adapter<ServiceCostAdapter.
 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView DisplayKms;
+        TextView BillMKmsU,BillMDateU,etTotalU,rsDespU,npDespU,ocDespU,wDespU,lDespU,rsPriceU,npPriceU,ocPriceU,wPriceU,lPriceU;;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
-            DisplayKms = itemView.findViewById(R.id.DisplayKms);
+            BillMKmsU = itemView.findViewById(R.id.BillMKmsU);
+            BillMDateU = itemView.findViewById(R.id.BillMDateU);
+            rsDespU = itemView.findViewById(R.id.rsDespU);
+            npDespU = itemView.findViewById(R.id.npDespU);
+            ocDespU = itemView.findViewById(R.id.ocDespU);
+            wDespU = itemView.findViewById(R.id.wDespU);
+            lDespU = itemView.findViewById(R.id.lDespU);
+            rsPriceU = itemView.findViewById(R.id.rsPriceU);
+            npPriceU = itemView.findViewById(R.id.npPriceU);
+            ocPriceU = itemView.findViewById(R.id.ocPriceU);
+            wPriceU = itemView.findViewById(R.id.wPriceU);
+            lPriceU= itemView.findViewById(R.id.lPriceU);
+            etTotalU= itemView.findViewById(R.id.etTotalU);
         }
     }
 

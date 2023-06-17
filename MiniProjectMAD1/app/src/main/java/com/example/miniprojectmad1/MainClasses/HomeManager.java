@@ -12,7 +12,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class HomeManager extends AppCompatActivity {
 ActivityHomeManagerBinding binding;
-ImageView viewBookingsBtn,billEntryBtn,updateSSBtn;
+ImageView viewBookingsBtn;
     FirebaseAuth auth = FirebaseAuth.getInstance();
 
     @Override
@@ -28,20 +28,20 @@ ImageView viewBookingsBtn,billEntryBtn,updateSSBtn;
                 startActivity(intent3);
             }
         });
-        binding.billEntryBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent2 = new Intent(HomeManager.this, BillEntryManager.class);
-                startActivity(intent2);
-            }
-        });
-        binding.updateSSBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent3 = new Intent(HomeManager.this, UpdateSSManager.class);
-                startActivity(intent3);
-            }
-        });
+//        binding.billEntryBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent2 = new Intent(HomeManager.this, BillEntryManager.class);
+//                startActivity(intent2);
+//            }
+//        });
+//        binding.updateSSBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent3 = new Intent(HomeManager.this, UpdateSSManager.class);
+//                startActivity(intent3);
+//            }
+//        });
 
         binding.logoutButtonMan.setOnClickListener(new View.OnClickListener() {
             @Override

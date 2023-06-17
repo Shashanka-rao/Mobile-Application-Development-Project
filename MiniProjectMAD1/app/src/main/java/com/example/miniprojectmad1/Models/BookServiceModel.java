@@ -6,16 +6,46 @@ public class BookServiceModel {
     private String selectedTime;
     private String pickUpLoc;
     private String dropLoc;
+    private String UserIdBook;
+    private String userNameB;
+    private String vRegNoB;
 
     public BookServiceModel() {
     }
 
-    public BookServiceModel(String location, String selectedDate, String selectedTime, String pickUpLoc, String dropLoc) {
+    public BookServiceModel(String location, String selectedDate, String selectedTime, String pickUpLoc, String dropLoc, String userIdBook, String userNameB, String vRegNoB) {
         this.location = location;
         this.selectedDate = selectedDate;
         this.selectedTime = selectedTime;
         this.pickUpLoc = pickUpLoc;
         this.dropLoc = dropLoc;
+        this.UserIdBook = userIdBook;
+        this.userNameB = userNameB;
+        this.vRegNoB = vRegNoB;
+    }
+
+    public String getUserNameB() {
+        return userNameB;
+    }
+
+    public void setUserNameB(String userNameB) {
+        this.userNameB = userNameB;
+    }
+
+    public String getvRegNoB() {
+        return vRegNoB;
+    }
+
+    public void setvRegNoB(String vRegNoB) {
+        this.vRegNoB = vRegNoB;
+    }
+
+    public String getUserIdBook() {
+        return UserIdBook;
+    }
+
+    public void setUserIdBook(String userIdBook) {
+        UserIdBook = userIdBook;
     }
 
     public String getLocation() {

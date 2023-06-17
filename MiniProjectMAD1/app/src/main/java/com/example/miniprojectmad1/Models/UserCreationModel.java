@@ -1,21 +1,26 @@
 package com.example.miniprojectmad1.Models;
 
 public class UserCreationModel {
-    String username,mobileNo,vRegNo,email;
+    String username,mobileNo,vRegNo,UserId;
 
     public UserCreationModel() {
         this.username = username;
         this.mobileNo = mobileNo;
         this.vRegNo = vRegNo;
-        this.email = email;
+        this.UserId = UserId;
     }
 
-    public String getEmail() {
-        return email;
+    public UserCreationModel(String username, String vRegNo) {
+        this.username = username;
+        this.vRegNo = vRegNo;
     }
 
-    public void setEmail(String email) {
-        this.email = email;
+    public String getUserId() {
+        return UserId;
+    }
+
+    public void setUserId(String userId) {
+        UserId = userId;
     }
 
     public String getUsername() {

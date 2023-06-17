@@ -26,36 +26,34 @@ public class ServiceHistory extends AppCompatActivity {
     ImageButton backButtonBSSH;
     FirebaseDatabase database;
     ServiceHistoryAdapter adapter;
-    ArrayList<ServiceHistoryModel> list;
+    ArrayList<ServiceHistoryModel> list1;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         binding = ActivityServiceHistoryBinding.inflate(getLayoutInflater());
-        super.onCreate(savedInstanceState);
         setContentView(binding.getRoot());
+        super.onCreate(savedInstanceState);
 
-
-        backButtonBSSH = (ImageButton) findViewById(R.id.backButtonBSSH);
         database = FirebaseDatabase.getInstance();
-        binding.ServiceHistory.setHasFixedSize(true);
-        binding.ServiceHistory.setLayoutManager(new LinearLayoutManager(this));
+        binding.rvServiceHistory.setHasFixedSize(true);
+        binding.rvServiceHistory.setLayoutManager(new LinearLayoutManager(this));
 
-        list = new ArrayList<>();
-        adapter = new ServiceHistoryAdapter(this,list);
-        binding.ServiceHistory.setAdapter(adapter);
+        list1 = new ArrayList<>();
+        adapter = new ServiceHistoryAdapter(this,list1);
+        binding.rvServiceHistory.setAdapter(adapter);
 
-        database.getReference().child("serviceNo").addValueEventListener(new ValueEventListener() {
+        database.getReference().child("Services").child("Bills").addValueEventListener(new ValueEventListener() {
 
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
-                list.clear();
+                list1.clear();
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     ServiceHistoryModel user = dataSnapshot.getValue(ServiceHistoryModel.class);
-                    list.add(user);
-                    Log.d("billInDecode",""+user);
+                    list1.add(user);
+//                    Log.d("billInDecode",""+user);
                 }
-                adapter.notifyDataSetChanged(); // Add this line
+             adapter.notifyDataSetChanged(); // Add this line
             }
 
             @Override
@@ -64,27 +62,8 @@ public class ServiceHistory extends AppCompatActivity {
             }
         });
 
-
-//        database.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren())
-//                {
-//                    ServiceHistoryModel user = dataSnapshot.getValue(ServiceHistoryModel.class);
-//                    list.add(user);
-//                }
-//                adapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-
-
-      // Back button
-      backButtonBSSH.setOnClickListener(new View.OnClickListener() {
+        // Back button
+      binding.backButtonBSSH.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
