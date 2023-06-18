@@ -108,7 +108,7 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#FFC107"
+            android:background="#292829"
             android:text="" />
 
         <TextView
@@ -116,7 +116,15 @@
             android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_weight="1"
-            android:background="#00AF80"
+            android:background="#2BC48A"
+            android:text="" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:background="#FFFFFF"
             android:text="" />
 
     </LinearLayout>

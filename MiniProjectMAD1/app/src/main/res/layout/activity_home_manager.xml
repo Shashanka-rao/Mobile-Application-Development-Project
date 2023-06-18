@@ -4,71 +4,27 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#220130"
+    android:background="#292829"
     tools:context=".MainClasses.HomeManager">
 
 
-    <Button
-        android:id="@+id/logoutButtonMan"
-        android:layout_width="wrap_content"
-        android:layout_height="25dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="30dp"
-        android:background="@drawable/buttonradius"
-        android:text="logout"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/ManTv"
-        android:layout_width="wrap_content"
-        android:layout_height="68dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="100dp"
-        android:layout_marginEnd="70dp"
-        android:text="Hello Manager!"
-        android:textColor="#23F1E5"
-        android:textSize="40dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/logoutButtonMan" />
-
-    <ImageView
-        android:id="@+id/imageView10"
-        android:layout_width="205dp"
-        android:layout_height="203dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="43dp"
-        android:layout_marginEnd="97dp"
-        android:background="#23F1E5"
-        android:src="@drawable/management"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ManTv" />
-
     <LinearLayout
-        android:layout_width="101dp"
-        android:layout_height="61dp"
+        android:layout_width="177dp"
+        android:layout_height="65dp"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentBottom="true"
-        android:layout_marginStart="200dp"
-        android:layout_marginEnd="200dp"
-        android:layout_marginBottom="100dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="10dp"
+
         android:background="@drawable/buttonradius"
         android:orientation="horizontal"
-
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent">
+        app:layout_constraintBottom_toTopOf="@+id/viewVBooking"
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:id="@+id/viewBookingsBtn"
-            android:layout_width="125dp"
+            android:layout_width="127dp"
             android:layout_height="match_parent"
             android:layout_weight="1"
             android:scaleType="fitCenter"
@@ -81,12 +37,90 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="65dp"
+        android:layout_marginBottom="20dp"
         android:layout_weight="1"
         android:text="View Bookings"
-        android:textColor="#23F1E5"
+        android:textColor="#FFFFFF"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="412dp"
+        android:layout_height="260dp"
+        android:backgroundTint="#292829"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="210dp"
+            android:background="@drawable/round_radius"
+            android:backgroundTint="#007BFF">
+
+            <Button
+                android:id="@+id/logoutButtonMan"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="10dp"
+                android:layout_marginTop="10dp"
+                android:background="@drawable/buttonradius"
+                android:backgroundTint="#CB2027"
+                android:text="logout"
+                android:textColor="#FFFFFF"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/displayheadingM"
+                android:layout_width="275dp"
+                android:layout_height="61dp"
+                android:layout_marginStart="69dp"
+                android:layout_marginBottom="50dp"
+                android:text="Hello Manager!"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="300dp"
+        android:layout_height="288dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/manImg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="21dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="23dp"
+                android:layout_marginBottom="16dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="1.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintVertical_bias="0.0"
+                app:srcCompat="@drawable/manufacturer" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

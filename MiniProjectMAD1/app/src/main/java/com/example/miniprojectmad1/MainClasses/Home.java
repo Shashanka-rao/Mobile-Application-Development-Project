@@ -23,6 +23,7 @@ public class Home extends AppCompatActivity {
     ActivityHomeBinding binding;
     public int flag=0; //HOME PAGE
     String regNoD;
+    ImageView manImg;
     FirebaseAuth auth = FirebaseAuth.getInstance();
     FirebaseDatabase database = FirebaseDatabase.getInstance();
     DatabaseReference databaseRef =database.getReference("Users").child("UserData");
@@ -114,6 +115,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, ServiceHistory.class);
+                intent.putExtra("vehicleRegNo",regNoD);
                 startActivity(intent);
             }
         });
@@ -144,6 +146,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Home.this, ServiceCost.class);
+                intent.putExtra("regNo",regNoD);
                 startActivity(intent);
             }
         });

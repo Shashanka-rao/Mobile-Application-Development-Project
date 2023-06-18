@@ -4,23 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#5F7D95"
+    android:background="#292829"
     tools:context=".MainClasses.ContactUs">
 
     <TextView
         android:id="@+id/headingCU"
-        android:layout_width="289dp"
-        android:layout_height="127dp"
+        android:layout_width="414dp"
+        android:layout_height="135dp"
 
-        android:layout_marginStart="100dp"
-        android:layout_marginTop="36dp"
-        android:layout_marginEnd="100dp"
-        android:background="@drawable/edittextradius"
-        android:backgroundTint="#2BC48A"
+        android:background="@drawable/round_radius"
+        android:backgroundTint="#007BFF"
         android:paddingTop="40dp"
         android:text="CONTACT US"
         android:textAlignment="center"
-        android:textColor="#23001E"
+        android:textColor="#FFFFFF"
         android:textSize="40dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +27,7 @@
         android:layout_width="372dp"
         android:layout_height="537dp"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="20dp"
         android:layout_marginBottom="20dp"
         android:background="@drawable/edittextradius"
@@ -40,7 +37,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/headingCU"
-        app:layout_constraintVertical_bias="0.95" >
+        app:layout_constraintVertical_bias="0.95">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,12 +49,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:layout_marginTop="50dp"
-                android:textSize="35dp"
-                android:backgroundTint="#EFEFEF"
                 android:background="@drawable/edittextradius"
-                android:textColor="#292829"
-                android:text="Emergency Service"
+                android:backgroundTint="#2BC48A"
                 android:paddingLeft="30dp"
+                android:text="Emergency Service"
+                android:textColor="#292829"
+                android:textSize="35dp"
 
                 />
 
@@ -65,18 +62,18 @@
                 android:id="@+id/emergencyDial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="7898849483"
-
                 android:paddingLeft="40dp"
+
+                android:text="7898849483"
                 android:textColor="#464F51"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/edittextradius"
-                android:backgroundTint="#EFEFEF"
+                android:backgroundTint="#FFC107"
                 android:paddingLeft="30dp"
                 android:text="Ambulance"
                 android:textColor="#292829"
@@ -86,103 +83,102 @@
                 android:id="@+id/ambulanceDial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="108"
-
                 android:paddingLeft="40dp"
+
+                android:text="108"
                 android:textColor="#464F51"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:textSize="35dp"
-                android:text="Police"
-                android:backgroundTint="#EFEFEF"
                 android:background="@drawable/edittextradius"
+                android:backgroundTint="#CB2027"
                 android:paddingLeft="30dp"
+                android:text="Police"
                 android:textColor="#292829"
-                />
+                android:textSize="35dp" />
 
             <TextView
                 android:id="@+id/policeDial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="100"
-
                 android:paddingLeft="40dp"
+
+                android:text="100"
                 android:textColor="#464F51"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:textSize="35dp"
-                android:text="Fire Safety"
-                android:backgroundTint="#EFEFEF"
                 android:background="@drawable/edittextradius"
-                android:textColor="#292829"
+                android:backgroundTint="#007BFF"
                 android:paddingLeft="30dp"
-                />
+                android:text="Fire Safety"
+                android:textColor="#292829"
+                android:textSize="35dp" />
 
             <TextView
                 android:id="@+id/fireSDial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="101"
-
                 android:paddingLeft="40dp"
+
+                android:text="101"
                 android:textColor="#464F51"
-                android:textSize="20dp"/>
+                android:textSize="20dp" />
+
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:textSize="35dp"
-                android:text="Tow"
-                android:backgroundTint="#EFEFEF"
                 android:background="@drawable/edittextradius"
+                android:backgroundTint="#EFEFEF"
                 android:paddingLeft="30dp"
+                android:text="Tow"
                 android:textColor="#292829"
-                />
+                android:textSize="35dp" />
 
             <TextView
                 android:id="@+id/towDial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="8947743322"
-
-                android:textColor="#464F51"
                 android:paddingLeft="40dp"
-                android:textSize="20dp"/>
+
+                android:text="8947743322"
+                android:textColor="#464F51"
+                android:textSize="20dp" />
 
             <TextView
 
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
-                android:textSize="35dp"
-                android:paddingLeft="30dp"
-                android:backgroundTint="#EFEFEF"
                 android:background="@drawable/edittextradius"
+                android:backgroundTint="#D5C6E0"
+                android:paddingLeft="30dp"
                 android:text="Developers"
                 android:textColor="#292829"
-                />
+                android:textSize="35dp" />
 
             <TextView
                 android:id="@+id/d1Dial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
                 android:paddingLeft="40dp"
+                android:text="8105476973"
                 android:textColor="#464F51"
 
-                android:text="8105476973" />
+                android:textSize="20dp" />
+
             <TextView
                 android:id="@+id/d2Dial"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textSize="20dp"
                 android:paddingLeft="40dp"
+                android:text="9740234550"
                 android:textColor="#464F51"
 
-                android:text="9740234550" />
+                android:textSize="20dp" />
 
 
         </LinearLayout>

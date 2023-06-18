@@ -19,10 +19,11 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
 //        binding = ActivityMainBinding.inflate(getLayoutInflater());
+//                setContentView(binding.getRoot());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-//        setContentView(binding.getRoot());
+
 
 
         signInButton = findViewById(R.id.signInButton);

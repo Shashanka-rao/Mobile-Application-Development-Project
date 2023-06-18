@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ImageView;
 
+import com.example.miniprojectmad1.R;
 import com.example.miniprojectmad1.databinding.ActivityHomeManagerBinding;
 import com.google.firebase.auth.FirebaseAuth;
 
@@ -28,6 +29,8 @@ ImageView viewBookingsBtn;
                 startActivity(intent3);
             }
         });
+
+        binding.manImg.setBackgroundResource(R.drawable.manufacturer);
 //        binding.billEntryBtn.setOnClickListener(new View.OnClickListener() {
 //            @Override
 //            public void onClick(View v) {
