@@ -11,6 +11,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.miniprojectmad1.AboutApp.WizardActivity;
 import com.example.miniprojectmad1.databinding.ActivityHomeBinding;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
@@ -124,7 +125,7 @@ public class Home extends AppCompatActivity {
             @Override
             public void onClick(View v) {
              auth.signOut();
-             Intent intent = new Intent(Home.this, MainActivity.class);
+             Intent intent = new Intent(Home.this, WizardActivity.class);
              intent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
              startActivity(intent);
             }
