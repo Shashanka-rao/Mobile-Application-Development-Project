@@ -5,17 +5,21 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainClasses.ViewBookingManager"
-    android:background="#220130">
+    android:background="#292829">
+
 
     <TextView
-        android:id="@+id/headingtv"
-        android:layout_width="412dp"
-        android:layout_height="79dp"
-        android:layout_marginTop="50dp"
+        android:id="@+id/textView20"
+        android:layout_width="410dp"
+        android:layout_height="135dp"
+        android:background="@drawable/round_radius"
+        android:backgroundTint="#007BFF"
         android:text="Bookings"
+        android:textStyle="bold"
+        android:padding="35dp"
         android:textAlignment="center"
-        android:textColor="#23F1E5"
-        android:textSize="48sp"
+        android:textColor="#ffffff"
+        android:textSize="45dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
@@ -25,10 +29,12 @@
         android:layout_width="402dp"
         android:layout_height="533dp"
         android:layout_marginStart="10dp"
+        android:layout_marginTop="25dp"
         android:layout_marginEnd="10dp"
         android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView20" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

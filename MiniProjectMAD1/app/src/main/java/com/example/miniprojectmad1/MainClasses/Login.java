@@ -112,7 +112,6 @@ public class Login extends AppCompatActivity {
                     Intent intent2 = new Intent(Login.this,Home.class);
                     intent2.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     startActivity(intent2);
-
                 }
                 else {
                     Intent intent1 = new Intent(Login.this, HomeManager.class);

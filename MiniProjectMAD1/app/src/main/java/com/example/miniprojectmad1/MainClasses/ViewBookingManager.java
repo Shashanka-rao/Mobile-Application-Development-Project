@@ -1,21 +1,13 @@
 package com.example.miniprojectmad1.MainClasses;
 
+import android.os.Bundle;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
-import android.widget.ImageButton;
-
-import com.example.miniprojectmad1.Adapters.ServiceHistoryAdapter;
 import com.example.miniprojectmad1.Adapters.ViewBookingManagerAdapter;
-import com.example.miniprojectmad1.Models.ServiceHistoryModel;
 import com.example.miniprojectmad1.Models.ViewBookingManagerModel;
-import com.example.miniprojectmad1.R;
-import com.example.miniprojectmad1.databinding.ActivityServiceHistoryBinding;
 import com.example.miniprojectmad1.databinding.ActivityViewBookingManagerBinding;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -24,6 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ViewBookingManager extends AppCompatActivity {
     ActivityViewBookingManagerBinding binding;
@@ -61,7 +54,7 @@ public class ViewBookingManager extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     ViewBookingManagerModel user = dataSnapshot.getValue(ViewBookingManagerModel.class);
                     list.add(user);
-                    Log.d("View Booking Decode ",""+user);
+                    Collections.reverse(list);
                 }
                 adapter.notifyDataSetChanged();
             }

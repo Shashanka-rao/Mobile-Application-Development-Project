@@ -9,9 +9,7 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.miniprojectmad1.MainClasses.ServiceCost;
 import com.example.miniprojectmad1.Models.ServiceCostModel;
-import com.example.miniprojectmad1.Models.ServiceHistoryModel;
 import com.example.miniprojectmad1.R;
 
 import java.util.ArrayList;
@@ -52,6 +50,7 @@ public class ServiceCostAdapter extends RecyclerView.Adapter<ServiceCostAdapter.
         //total
         holder.etTotalU.setText(user.getBillIn());
 
+
     }
 
     @Override
@@ -61,7 +60,7 @@ public class ServiceCostAdapter extends RecyclerView.Adapter<ServiceCostAdapter.
 
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
-        TextView BillMKmsU,BillMDateU,etTotalU,rsDespU,npDespU,ocDespU,wDespU,lDespU,rsPriceU,npPriceU,ocPriceU,wPriceU,lPriceU;;
+        TextView BillMKmsU,BillMDateU,etTotalU,rsDespU,npDespU,ocDespU,wDespU,lDespU,rsPriceU,npPriceU,ocPriceU,wPriceU,lPriceU;
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
             BillMKmsU = itemView.findViewById(R.id.BillMKmsU);
@@ -77,6 +76,7 @@ public class ServiceCostAdapter extends RecyclerView.Adapter<ServiceCostAdapter.
             wPriceU = itemView.findViewById(R.id.wPriceU);
             lPriceU= itemView.findViewById(R.id.lPriceU);
             etTotalU= itemView.findViewById(R.id.etTotalU);
+
         }
     }
 

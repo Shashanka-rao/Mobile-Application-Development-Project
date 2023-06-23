@@ -2,9 +2,7 @@ package com.example.miniprojectmad1.MainClasses;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
-import android.widget.Toast;
+import android.view.View;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
@@ -13,8 +11,6 @@ import androidx.recyclerview.widget.LinearLayoutManager;
 import com.example.miniprojectmad1.Adapters.ServiceCostAdapter;
 import com.example.miniprojectmad1.Models.ServiceCostModel;
 import com.example.miniprojectmad1.databinding.ActivityServiceCostBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -23,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ServiceCost extends AppCompatActivity {
 
@@ -64,28 +61,7 @@ public class ServiceCost extends AppCompatActivity {
         DatabaseReference databaseRef =database.getReference("Users").child("UserData");
 
 
-        //check condition
-//        String uidU = auth.getCurrentUser().getUid(); // Assuming you want to retrieve the uid of the current user
 
-//        databaseRef.addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
-//                for (DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
-//                    String uid = childSnapshot.child("userId").getValue(String.class);
-//                    if (uid != null && uid.equals(uidU)) {
-//                        regNoD = childSnapshot.child("vRegNo").getValue(String.class);
-//
-//                    }
-//                }
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//                Log.e("TAG", "Failed to read value.", error.toException());
-//            }
-//        });
-
-        //true so proceed
         //checking each user's data
 
         referenceBill.addValueEventListener(new ValueEventListener() {
@@ -107,6 +83,7 @@ public class ServiceCost extends AppCompatActivity {
                                     if(regisNo.equals(regNumber)) {
                                         list.add(user);
                                     }
+                                    Collections.reverse(list);
                                 }
                                 adapter.notifyDataSetChanged();
                             }
@@ -129,8 +106,67 @@ public class ServiceCost extends AppCompatActivity {
             }
         });
 
+        binding.backButtonBSSC.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                onBackPressed();
+            }
+        });
 
-        //condition
+
+
+    }
+    @Override
+    public void onBackPressed() {
+        finish();
+        super.onBackPressed();
+    }
+}
+
+
+
+//check condition
+//        String uidU = auth.getCurrentUser().getUid(); // Assuming you want to retrieve the uid of the current user
+
+//        databaseRef.addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+//                for (DataSnapshot childSnapshot : dataSnapshot.getChildren()) {
+//                    String uid = childSnapshot.child("userId").getValue(String.class);
+//                    if (uid != null && uid.equals(uidU)) {
+//                        regNoD = childSnapshot.child("vRegNo").getValue(String.class);
+//
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//                Log.e("TAG", "Failed to read value.", error.toException());
+//            }
+//        });
+
+
+
+//        database.getReference().child("Services").child("Bills").addValueEventListener(new ValueEventListener() {
+//            @Override
+//            public void onDataChange(@NonNull DataSnapshot snapshot) {
+//                list.clear();
+//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
+//                    ServiceCostModel user = dataSnapshot.getValue(ServiceCostModel.class);
+//                    list.add(user);
+//                }
+//                adapter.notifyDataSetChanged();
+//            }
+//
+//            @Override
+//            public void onCancelled(@NonNull DatabaseError error) {
+//
+//            }
+//        });
+
+
+//condition
 
 //        if(regNoD.equals(regNumber)){
 //            referenceBill.addValueEventListener(new ValueEventListener() {
@@ -154,30 +190,3 @@ public class ServiceCost extends AppCompatActivity {
 //            Toast.makeText(ServiceCost.this, "Book a Service for your vehicle!!", Toast.LENGTH_SHORT).show();
 //        }
 
-
-//        database.getReference().child("Services").child("Bills").addValueEventListener(new ValueEventListener() {
-//            @Override
-//            public void onDataChange(@NonNull DataSnapshot snapshot) {
-//                list.clear();
-//                for (DataSnapshot dataSnapshot : snapshot.getChildren()){
-//                    ServiceCostModel user = dataSnapshot.getValue(ServiceCostModel.class);
-//                    list.add(user);
-//                }
-//                adapter.notifyDataSetChanged();
-//            }
-//
-//            @Override
-//            public void onCancelled(@NonNull DatabaseError error) {
-//
-//            }
-//        });
-
-
-
-    }
-    @Override
-    public void onBackPressed() {
-        finish();
-        super.onBackPressed();
-    }
-}

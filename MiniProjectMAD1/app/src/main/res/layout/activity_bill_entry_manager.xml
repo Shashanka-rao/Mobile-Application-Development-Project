@@ -205,6 +205,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="Nil"
+                        android:textColorHint="#808080"
                         android:inputType="text"
                         android:textSize="16dp"
                         android:textAlignment="center"
@@ -216,6 +217,7 @@
                         android:layout_height="40dp"
                         android:layout_weight="1"
                         android:ems="10"
+                        android:textColorHint="#808080"
                         android:hint="0.00"
                         android:inputType="text"
                         android:textAlignment="center"
@@ -247,6 +249,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="Nil"
+                        android:textColorHint="#808080"
                         android:textSize="16dp"
                         android:inputType="text"
                         android:textAlignment="center"
@@ -259,6 +262,7 @@
                         android:layout_weight="1"
                         android:ems="10"
                         android:hint="0.00"
+                        android:textColorHint="#808080"
                         android:inputType="text"
                         android:textAlignment="center"
                         android:textColor="#000000"
@@ -289,6 +293,7 @@
                         android:ems="10"
                         android:hint="Nil"
                         android:textSize="16dp"
+                        android:textColorHint="#808080"
                         android:inputType="text"
                         android:textAlignment="center"
                         android:textColor="#000000" />
@@ -301,6 +306,7 @@
                         android:textSize="16dp"
                         android:ems="10"
                         android:hint="0.00"
+                        android:textColorHint="#808080"
                         android:inputType="text"
                         android:textAlignment="center"
                         android:textColor="#000000" />
@@ -331,6 +337,7 @@
                         android:hint="Nil"
                         android:textSize="16dp"
                         android:inputType="text"
+                        android:textColorHint="#808080"
                         android:textAlignment="center"
                         android:textColor="#000000" />
 
@@ -343,6 +350,7 @@
                         android:textSize="16dp"
                         android:hint="0.00"
                         android:inputType="text"
+                        android:textColorHint="#808080"
                         android:textAlignment="center"
                         android:textColor="#000000" />
                 </LinearLayout>
@@ -372,6 +380,7 @@
                         android:hint="Nil"
                         android:textSize="16dp"
                         android:inputType="text"
+                        android:textColorHint="#808080"
                         android:textAlignment="center"
                         android:textColor="#000000" />
 
@@ -384,6 +393,7 @@
                         android:textSize="16dp"
                         android:hint="0.00"
                         android:inputType="text"
+                        android:textColorHint="#808080"
                         android:textAlignment="center"
                         android:textColor="#000000" />
                 </LinearLayout>
@@ -423,12 +433,12 @@
 
             <Button
                 android:id="@+id/calculateTotal"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginStart="75dp"
-                android:layout_marginBottom="19dp"
+                android:layout_width="108dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="72dp"
+                android:layout_marginBottom="20dp"
                 android:background="@drawable/buttonradius"
-                android:backgroundTint="#2BC48A"
+                android:backgroundTint="#FFC107"
                 android:text="generate total"
                 android:textSize="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"

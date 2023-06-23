@@ -49,16 +49,16 @@
 
                     <TextView
                         android:id="@+id/regNoBooked"
-                        android:layout_width="150dp"
+                        android:layout_width="117dp"
                         android:layout_height="40dp"
                         android:layout_weight="1"
-                        android:text="Reg No. :"
+                        android:text="Reg Number :"
                         android:textColor="#23F1E5"
                         android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/tvFetchRegNo"
-                        android:layout_width="272dp"
+                        android:layout_width="221dp"
                         android:layout_height="match_parent"
                         android:backgroundTint="#220130"
                         android:padding="4dp"

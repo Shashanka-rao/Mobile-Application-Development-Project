@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">My Mini Project</string>
+    <string name="app_name">Servify</string>
     <string name="title_activity_contact_us">ContactUs</string>
 
     <!-- Preference Titles -->

@@ -4,25 +4,55 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#220130"
+    android:background="#292829"
     tools:context=".MainClasses.trackService">
 
-    <TextView
-        android:id="@+id/tvHeading"
-        android:layout_width="413dp"
-        android:layout_height="107dp"
-        android:layout_marginStart="10dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="10dp"
-        android:background="#220130"
-        android:padding="25dp"
-        android:text="TRACK SERVICE"
-        android:textAlignment="center"
-        android:textColor="#23F1E5"
-        android:textSize="40dp"
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="140dp"
+        android:background="@drawable/round_radius"
+        android:backgroundTint="#007BFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageButton
+            android:id="@+id/backButtonBSSH"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="325dp"
+            android:layout_marginBottom="671dp"
+            android:backgroundTint="#007BFF"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="291dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="36dp"
+            android:text="Service History"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
 
     <LinearLayout
         android:layout_width="183dp"
@@ -39,7 +69,7 @@
             android:id="@+id/cbVehicleInU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#7E638C"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
             android:text="Vehicle In"
             android:textColor="#FFFFFF"
@@ -49,7 +79,7 @@
             android:id="@+id/cbROOpenU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#7E638C"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
             android:text="RO Open"
             android:textColor="#FFFFFF"
@@ -59,7 +89,7 @@
             android:id="@+id/cbInServiceU"
             android:layout_width="match_parent"
             android:layout_height="68dp"
-            android:background="#7E638C"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
             android:text="In Service"
             android:textColor="#FFFFFF"
@@ -69,7 +99,7 @@
             android:id="@+id/cbQualityCheckU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#7E638C"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
             android:text="Quality Check"
             android:textColor="#FFFFFF"
@@ -79,7 +109,7 @@
             android:id="@+id/cbWashingU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#7E638C"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
             android:text="Washing"
             android:textColor="#FFFFFF"
@@ -89,7 +119,7 @@
             android:id="@+id/cbDOneU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#7E638C"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
             android:drawableTint="#000000"
             android:text="Vehicle Ready"
@@ -116,10 +146,10 @@
             android:id="@+id/tvCVehicleInU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#220130"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
-            android:text="PENDING"
             android:paddingTop="20dp"
+            android:text="PENDING"
             android:textColor="#23F1E5"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -128,10 +158,10 @@
             android:id="@+id/tvCROOpenU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#220130"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
-            android:text="PENDING"
             android:paddingTop="20dp"
+            android:text="PENDING"
             android:textColor="#23F1E5"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -140,10 +170,10 @@
             android:id="@+id/tvCInServiceU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#220130"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
-            android:text="PENDING"
             android:paddingTop="20dp"
+            android:text="PENDING"
             android:textColor="#23F1E5"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -152,10 +182,10 @@
             android:id="@+id/tvCQualityCheckU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#220130"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
-            android:text="PENDING"
             android:paddingTop="20dp"
+            android:text="PENDING"
             android:textColor="#23F1E5"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -164,10 +194,10 @@
             android:id="@+id/tvCWashingU"
             android:layout_width="match_parent"
             android:layout_height="60dp"
-            android:background="#220130"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
-            android:text="PENDING"
             android:paddingTop="20dp"
+            android:text="PENDING"
             android:textColor="#23F1E5"
             android:textSize="18dp"
             android:textStyle="bold" />
@@ -176,7 +206,7 @@
             android:id="@+id/tvCDoneU"
             android:layout_width="match_parent"
             android:layout_height="69dp"
-            android:background="#220130"
+            android:background="#292829"
             android:buttonTint="#23F1E5"
             android:paddingTop="20dp"
             android:text="PENDING"
@@ -184,8 +214,6 @@
             android:textSize="18dp"
             android:textStyle="bold" />
     </LinearLayout>
-
-
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

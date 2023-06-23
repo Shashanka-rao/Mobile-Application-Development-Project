@@ -4,9 +4,64 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#220130"
+    android:background="#292829"
     tools:context=".MainClasses.Home">
 
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="381dp"
+        android:layout_height="131dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginEnd="0dp"
+        android:background="@drawable/round_radius"
+        android:backgroundTint="#007BFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <Button
+            android:id="@+id/logoutButton"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="6dp"
+            android:background="@drawable/buttonradius"
+            android:backgroundTint="#CB2027"
+            android:text="logout"
+            android:textColor="#FFFFFF"
+            app:layout_constraintBottom_toTopOf="@+id/textView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="291dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="36dp"
+            android:text="Servify  "
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="48sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/backButtonBS"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!--        android:="@drawable/baseline_keyboard_arrow_down_24"-->
 
@@ -23,9 +78,9 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text=""
-            android:textColor="#FFFFFF"
             android:textAlignment="center"
-            android:textSize="22dp"/>
+            android:textColor="#FFFFFF"
+            android:textSize="22dp" />
 
         <TextView
             android:id="@+id/vRegNoH"
@@ -45,7 +100,9 @@
         android:layout_alignParentBottom="true"
         android:layout_marginEnd="45dp"
         android:layout_marginBottom="219dp"
-        app:srcCompat="@drawable/baseline_car_repair_24" />
+        android:background="@drawable/buttonradius"
+        android:backgroundTint="@color/white"
+        app:srcCompat="@drawable/manufacturer" />
 
     <TextView
         android:id="@+id/bookServiceBtn"
@@ -56,23 +113,14 @@
         android:layout_marginStart="50dp"
         android:layout_marginBottom="300dp"
         android:shadowColor="#BFB7B7"
+        android:background="@drawable/buttonradius"
+        android:backgroundTint="@color/white"
+        android:textColor="#292829"
         android:text="Book Service"
-        android:textColor="#23F1E5"
         android:textSize="34sp"
          />
 
-    <Button
-        android:id="@+id/logoutButton"
-        android:layout_width="wrap_content"
-        android:layout_height="20dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="306dp"
-        android:layout_marginBottom="800dp"
-        android:background="@drawable/buttonradius"
-        android:text="logout" />
+
 
     <TextView
         android:id="@+id/trackServiceBtn"
@@ -83,7 +131,9 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="150dp"
         android:text="Track Service"
-        android:textColor="#23F1E5"
+        android:background="@drawable/buttonradius"
+        android:backgroundTint="@color/white"
+        android:textColor="#292829"
         android:textSize="34sp"
         />
 
@@ -96,7 +146,9 @@
         android:layout_marginEnd="50dp"
         android:layout_marginBottom="300dp"
         android:text="Service History"
-        android:textColor="#23F1E5"
+        android:background="@drawable/buttonradius"
+        android:backgroundTint="@color/white"
+        android:textColor="#292829"
         android:textSize="34sp"
         />
 
@@ -109,19 +161,9 @@
         android:layout_marginEnd="40dp"
         android:layout_marginBottom="15dp"
         android:text="Contacts"
-        android:textColor="#23F1E5" />
+        android:textColor="#FFC107" />
 
-    <ImageView
-        android:id="@+id/notificationBtn"
-        android:layout_width="41dp"
-        android:layout_height="46dp"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginTop="0dp"
-        android:layout_marginEnd="20dp"
-        android:layout_marginBottom="800dp"
-        app:srcCompat="@drawable/baseline_notifications_24" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -164,7 +206,7 @@
         android:layout_marginStart="170dp"
         android:layout_marginBottom="15dp"
         android:text="Dashboard"
-        android:textColor="#23F1E5" />
+        android:textColor="#FFC107" />
 
     <TextView
         android:id="@+id/homeEt"
@@ -177,7 +219,7 @@
         android:layout_marginEnd="311dp"
         android:layout_marginBottom="15dp"
         android:text="Home"
-        android:textColor="#23F1E5" />
+        android:textColor="#FFC107" />
 
     <TextView
         android:id="@+id/serviceCostBtn"
@@ -188,7 +230,9 @@
         android:layout_marginStart="50dp"
         android:layout_marginBottom="150dp"
         android:text="Service Cost"
-        android:textColor="#23F1E5"
+        android:background="@drawable/buttonradius"
+        android:backgroundTint="@color/white"
+        android:textColor="#292829"
         android:textSize="34sp"
        />
 

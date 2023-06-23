@@ -4,36 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#220130"
+    android:background="#292829"
     android:orientation="vertical"
     tools:context=".MainClasses.ServiceHistory">
 
-    <ImageButton
-        android:id="@+id/backButtonBSSH"
-        android:layout_width="match_parent"
-        android:layout_height="50dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginEnd="325dp"
-        android:layout_marginBottom="0dp"
-        android:backgroundTint="#220130"
-        app:srcCompat="@drawable/baseline_arrow_back_24" />
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="411dp"
+        android:layout_height="140dp"
+        android:background="@drawable/round_radius"
+        android:backgroundTint="#007BFF"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
-    <TextView
-        android:id="@+id/heading"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="0dp"
-        android:layout_marginBottom="25dp"
-        android:text="Service History"
-        android:textAlignment="center"
-        android:textColor="#23F1E5"
-        android:textSize="48sp"
-        android:textStyle="bold" />
+        <ImageButton
+            android:id="@+id/backButtonBSSH"
+            android:layout_width="64dp"
+            android:layout_height="60dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="325dp"
+            android:layout_marginBottom="671dp"
+            android:backgroundTint="#007BFF"
+            app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="291dp"
+            android:layout_height="64dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="6dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="50dp"
+            android:layout_marginBottom="36dp"
+            android:text="Service History"
+            android:textAlignment="center"
+            android:textColor="#FFFFFF"
+            android:textSize="35dp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvServiceHistory"
         android:layout_width="match_parent"
-        android:layout_height="497dp"
-        android:background="#220130" />
+        android:layout_height="550dp"
+        android:background="#292829" />
 
 </LinearLayout>

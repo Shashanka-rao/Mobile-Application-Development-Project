@@ -93,31 +93,22 @@
                     app:layout_constraintStart_toStartOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
         </androidx.cardview.widget.CardView>
-        <Button
-            android:id="@+id/btnNext4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="100dp"
-            android:layout_marginBottom="30dp"
-            android:background="@drawable/buttonradius"
-            android:text="GO"
-            android:textColor="#000000"
-            android:textSize="20dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent" />
 
         <Button
-            android:id="@+id/btnSkip4"
-            android:layout_width="94dp"
-            android:layout_height="47dp"
-            android:layout_marginStart="100dp"
-            android:layout_marginBottom="30dp"
+            android:id="@+id/btnNext4"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="150dp"
+            android:layout_marginEnd="200dp"
+            android:layout_marginBottom="52dp"
             android:background="@drawable/buttonradius"
+            android:text="GO"
             android:backgroundTint="#FFC107"
-            android:text="SKIP"
             android:textColor="#000000"
-            android:textSize="20dp"
+            android:textSize="40dp"
             app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.397"
             app:layout_constraintStart_toStartOf="parent" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>

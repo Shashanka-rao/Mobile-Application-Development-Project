@@ -1,9 +1,181 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="#292829"
+    tools:context=".MainClasses.Login">
 
-    <FrameLayout
-        android:id="@+id/settings"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent" />
-</LinearLayout>
+    <ImageButton
+        android:id="@+id/backButton"
+        android:layout_width="64dp"
+        android:layout_height="60dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginBottom="671dp"
+        android:backgroundTint="#292829"
+        app:srcCompat="@drawable/baseline_arrow_back_24" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView4"
+        android:layout_width="413dp"
+        android:layout_height="384dp"
+        android:background="@drawable/round_radius"
+
+
+        app:cardCornerRadius="40dp"
+        tools:layout_editor_absoluteX="-2dp"
+        tools:layout_editor_absoluteY="346dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="414dp"
+            android:background="#007BFF">
+
+            <TextView
+                android:id="@+id/Hey_User"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="Hey User!"
+                android:textColor="#FFFFFF"
+                android:textSize="40dp"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="25dp" />
+
+            <TextView
+                android:id="@+id/no_account"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="Don't have an account?"
+                android:textColor="#FFFFFF"
+                android:textSize="14dp"
+                tools:layout_editor_absoluteX="105dp"
+                tools:layout_editor_absoluteY="339dp" />
+
+            <EditText
+                android:id="@+id/loginPassword"
+                android:layout_width="275dp"
+                android:layout_height="49dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/edittextradius"
+                android:backgroundTint="#8BF5FA"
+                android:drawableLeft="@drawable/baseline_lock_24"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="Password"
+                android:inputType="textPassword"
+                android:padding="7dp"
+                android:textColorHint="#808080"
+                android:textSize="18dp"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="202dp" />
+
+            <EditText
+                android:id="@+id/loginEmail"
+                android:layout_width="275dp"
+                android:layout_height="52dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/edittextradius"
+                android:backgroundTint="#8BF5FA"
+                android:drawableStart="@drawable/baseline_person_outline_24"
+                android:drawablePadding="5dp"
+                android:ems="10"
+                android:hint="e-mail"
+                android:inputType="text"
+                android:padding="8dp"
+                android:text=""
+                android:textColorHint="#808080"
+                android:textSize="18dp"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="130dp" />
+
+            <Button
+                android:id="@+id/loginButton"
+                android:layout_width="280dp"
+                android:layout_height="55dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:background="@drawable/buttonradius"
+                android:text="login"
+                android:textAlignment="center"
+                android:textAllCaps="true"
+                android:textColor="#FFFFFF"
+                android:textSize="30dp"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="274dp" />
+
+            <TextView
+                android:id="@+id/signUpButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="Sign Up"
+                android:textColor="#FFC107"
+                tools:layout_editor_absoluteX="260dp"
+                tools:layout_editor_absoluteY="339dp" />
+
+            <TextView
+                android:id="@+id/Please_fill"
+                android:layout_width="182dp"
+                android:layout_height="25dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:text="Please fill the input below here"
+                android:textColor="#ffffff"
+                android:textSize="12dp"
+                tools:layout_editor_absoluteX="69dp"
+                tools:layout_editor_absoluteY="78dp" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="212dp"
+        android:layout_height="161dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="60dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="226dp"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintBottom_toTopOf="@+id/cardView4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.509"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/backButton"
+        app:layout_constraintVertical_bias="0.0" >
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageButton
+                android:id="@+id/imageButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="7dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="7dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:srcCompat="@drawable/shield" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

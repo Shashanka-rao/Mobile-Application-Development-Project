@@ -1,18 +1,14 @@
 package com.example.miniprojectmad1.MainClasses;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 
-import android.content.Intent;
-import android.os.Bundle;
-import android.provider.ContactsContract;
-import android.util.Log;
-import android.view.View;
-import android.widget.ImageButton;
-
-import com.example.miniprojectmad1.Models.ServiceCostModel;
-import com.example.miniprojectmad1.R;
 import com.example.miniprojectmad1.Adapters.ServiceHistoryAdapter;
 import com.example.miniprojectmad1.Models.ServiceHistoryModel;
 import com.example.miniprojectmad1.databinding.ActivityServiceHistoryBinding;
@@ -23,6 +19,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class ServiceHistory extends AppCompatActivity {
 
@@ -78,6 +75,7 @@ public class ServiceHistory extends AppCompatActivity {
                                 if(regisNo.equals(regNumber)) {
                                     list1.add(user);
                                 }
+                                Collections.reverse(list1);
                             }
                             adapter.notifyDataSetChanged();
                         }

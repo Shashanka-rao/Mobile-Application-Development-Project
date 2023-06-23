@@ -1,33 +1,27 @@
 package com.example.miniprojectmad1.MainClasses;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.os.Bundle;
-import android.util.Log;
-import android.view.View;
 import android.app.DatePickerDialog;
 import android.app.TimePickerDialog;
+import android.os.Bundle;
+import android.view.View;
 import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.miniprojectmad1.Models.BookServiceModel;
-import com.example.miniprojectmad1.Models.ServiceHistoryModel;
 import com.example.miniprojectmad1.Models.UserCreationModel;
-import com.example.miniprojectmad1.Models.ViewBookingManagerModel;
 import com.example.miniprojectmad1.R;
 import com.example.miniprojectmad1.databinding.ActivityBookserviceBinding;
-import com.google.android.gms.tasks.OnCompleteListener;
-import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
-
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -144,12 +138,22 @@ public class Bookservice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 BookServiceModel model = new BookServiceModel();
-
+                String pUpLoc,pDropLoc;
                 String location = binding.etLocation.getText().toString().trim();
                 String selectedDate = binding.tvSelectedDate.getText().toString().trim();
                 String selectedTime = binding.tvSelectedTime.getText().toString().trim();
-                String pUpLoc = binding.etPickUp.getText().toString().trim();
-                String pDropLoc = binding.etDrop1.getText().toString().trim();
+                pUpLoc = binding.etPickUp.getText().toString().trim();
+                pDropLoc = binding.etDrop1.getText().toString().trim();
+                //modified - test
+//                if(checkBoxPD.isChecked()) {
+//                    pUpLoc = binding.etPickUp.getText().toString().trim();
+//                    pDropLoc = binding.etDrop1.getText().toString().trim();
+//                }
+//                else
+//                {
+//                    pUpLoc="Not Opted";
+//                    pDropLoc="Not Opted";
+//                }
 
                 model.setLocation(location);
                 model.setSelectedDate(selectedDate);
@@ -169,7 +173,8 @@ public class Bookservice extends AppCompatActivity {
 
                     //to clear after submission
                     //checkbox
-                    binding.checkBoxPD.performClick();
+                    if(checkBoxPD.isChecked()){
+                        binding.checkBoxPD.performClick();}
                     // time
                     binding.SelectedTimeDisplay.setVisibility(View.INVISIBLE);
                     binding.tvSelectedTime.setVisibility(View.INVISIBLE);

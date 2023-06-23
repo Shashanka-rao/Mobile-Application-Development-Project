@@ -38,7 +38,7 @@ public class ServiceHistoryAdapter extends RecyclerView.Adapter<ServiceHistoryAd
     @Override
     public void onBindViewHolder(@NonNull MyViewHolder holder, int position) {
         ServiceHistoryModel user = list.get(position);
-        holder.serviceNumber.setText(""+(position+1));
+        //holder.serviceNumber.setText(""+(position+1));
         holder.kmsInTV.setText(user.getKmsIn());
         holder.dateInTV.setText(user.getDateIn());
         holder.billInTV.setText(user.getBillIn());
@@ -52,12 +52,12 @@ public class ServiceHistoryAdapter extends RecyclerView.Adapter<ServiceHistoryAd
 
     public static class MyViewHolder extends RecyclerView.ViewHolder{
 
-        TextView kmsInTV,dateInTV,billInTV,serviceNumber;
-
+        TextView kmsInTV,dateInTV,billInTV;
+//serviceNumber
         public MyViewHolder(@NonNull View itemView) {
             super(itemView);
 
-            serviceNumber = itemView.findViewById(R.id.serviceNumber);
+//            serviceNumber = itemView.findViewById(R.id.serviceNumber);
             kmsInTV = itemView.findViewById(R.id.kmsInTV);
             dateInTV = itemView.findViewById(R.id.dateInTV);
             billInTV = itemView.findViewById(R.id.billInTV);
