@@ -54,8 +54,8 @@ public class ViewBookingManager extends AppCompatActivity {
                 for (DataSnapshot dataSnapshot : snapshot.getChildren()) {
                     ViewBookingManagerModel user = dataSnapshot.getValue(ViewBookingManagerModel.class);
                     list.add(user);
-                    Collections.reverse(list);
                 }
+                Collections.reverse(list);
                 adapter.notifyDataSetChanged();
             }
 

@@ -83,8 +83,8 @@ public class ServiceCost extends AppCompatActivity {
                                     if(regisNo.equals(regNumber)) {
                                         list.add(user);
                                     }
-                                    Collections.reverse(list);
                                 }
+                                Collections.reverse(list);
                                 adapter.notifyDataSetChanged();
                             }
 

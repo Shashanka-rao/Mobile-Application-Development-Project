@@ -138,12 +138,12 @@ public class Bookservice extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 BookServiceModel model = new BookServiceModel();
-                String pUpLoc,pDropLoc;
+
                 String location = binding.etLocation.getText().toString().trim();
                 String selectedDate = binding.tvSelectedDate.getText().toString().trim();
                 String selectedTime = binding.tvSelectedTime.getText().toString().trim();
-                pUpLoc = binding.etPickUp.getText().toString().trim();
-                pDropLoc = binding.etDrop1.getText().toString().trim();
+                String pUpLoc = binding.etPickUp.getText().toString().trim();
+                String pDropLoc = binding.etDrop1.getText().toString().trim();
                 //modified - test
 //                if(checkBoxPD.isChecked()) {
 //                    pUpLoc = binding.etPickUp.getText().toString().trim();

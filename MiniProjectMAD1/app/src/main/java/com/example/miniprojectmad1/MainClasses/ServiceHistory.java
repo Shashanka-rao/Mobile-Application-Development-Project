@@ -75,8 +75,8 @@ public class ServiceHistory extends AppCompatActivity {
                                 if(regisNo.equals(regNumber)) {
                                     list1.add(user);
                                 }
-                                Collections.reverse(list1);
                             }
+                            Collections.reverse(list1);
                             adapter.notifyDataSetChanged();
                         }
 

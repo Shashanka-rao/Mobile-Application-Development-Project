@@ -52,7 +52,6 @@
                 android:text="Emergency Service"
                 android:textColor="#292829"
                 android:textSize="35dp"
-
                 />
 
             <TextView
@@ -61,7 +60,7 @@
                 android:layout_height="wrap_content"
                 android:paddingLeft="40dp"
 
-                android:text="7898849483"
+                android:text="7624808021"
                 android:textColor="#464F51"
                 android:textSize="20dp" />
 
@@ -130,7 +129,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="45dp"
                 android:background="@drawable/edittextradius"
-                android:backgroundTint="#EFEFEF"
+                android:backgroundTint="#D5C6E0"
                 android:paddingLeft="30dp"
                 android:text="Tow"
                 android:textColor="#292829"
@@ -146,36 +145,36 @@
                 android:textColor="#464F51"
                 android:textSize="20dp" />
 
-            <TextView
+<!--            <TextView-->
 
-                android:layout_width="match_parent"
-                android:layout_height="45dp"
-                android:background="@drawable/edittextradius"
-                android:backgroundTint="#D5C6E0"
-                android:paddingLeft="30dp"
-                android:text="Developers"
-                android:textColor="#292829"
-                android:textSize="35dp" />
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="45dp"-->
+<!--                android:background="@drawable/edittextradius"-->
+<!--                android:backgroundTint="#D5C6E0"-->
+<!--                android:paddingLeft="30dp"-->
+<!--                android:text="Developers"-->
+<!--                android:textColor="#292829"-->
+<!--                android:textSize="35dp" />-->
 
-            <TextView
-                android:id="@+id/d1Dial"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="40dp"
-                android:text="8105476973"
-                android:textColor="#464F51"
+<!--            <TextView-->
+<!--                android:id="@+id/d1Dial"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingLeft="40dp"-->
+<!--                android:text="8105476973"-->
+<!--                android:textColor="#464F51"-->
 
-                android:textSize="20dp" />
+<!--                android:textSize="20dp" />-->
 
-            <TextView
-                android:id="@+id/d2Dial"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:paddingLeft="40dp"
-                android:text="9740234550"
-                android:textColor="#464F51"
+<!--            <TextView-->
+<!--                android:id="@+id/d2Dial"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:paddingLeft="40dp"-->
+<!--                android:text="9740234550"-->
+<!--                android:textColor="#464F51"-->
 
-                android:textSize="20dp" />
+<!--                android:textSize="20dp" />-->
 
 
         </LinearLayout>

@@ -51,27 +51,27 @@ ActivityContactUsBinding binding;
                 startActivity(intent);
             }
         });
-        binding.d1Dial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:8105476973"));
-                startActivity(intent);
-            }
-        });
-        binding.d2Dial.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent= new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:9740234550"));
-                startActivity(intent);
-            }
-        });
+//        binding.d1Dial.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(Intent.ACTION_DIAL);
+//                intent.setData(Uri.parse("tel:8105476973"));
+//                startActivity(intent);
+//            }
+//        });
+//        binding.d2Dial.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent= new Intent(Intent.ACTION_DIAL);
+//                intent.setData(Uri.parse("tel:9740234550"));
+//                startActivity(intent);
+//            }
+//        });
         binding.emergencyDial.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent= new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:9740234550"));
+                intent.setData(Uri.parse("tel:7624808021"));
                 startActivity(intent);
             }
         });

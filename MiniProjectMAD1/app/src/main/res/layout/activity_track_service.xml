@@ -41,7 +41,7 @@
             android:layout_marginTop="30dp"
             android:layout_marginEnd="50dp"
             android:layout_marginBottom="36dp"
-            android:text="Service History"
+            android:text="Track Service"
             android:textAlignment="center"
             android:textColor="#FFFFFF"
             android:textSize="35dp"

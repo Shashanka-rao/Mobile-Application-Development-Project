@@ -1,8 +1,5 @@
 package com.example.miniprojectmad1.MainClasses;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,6 +10,9 @@ import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
+
 import com.example.miniprojectmad1.R;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
@@ -21,21 +21,16 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 public class Login extends AppCompatActivity {
-
-//    ActivityLoginBinding binding;
     EditText loginEmail,loginPassword;
     Button loginButton;
     TextView signUpButton;
     ImageButton backButton;
-    int checkUser;
     private FirebaseAuth auth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
-//        binding = ActivityLoginBinding.inflate(getLayoutInflater());
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-//        setContentView(binding.getRoot());
 
         loginEmail = findViewById(R.id.loginEmail);
         loginPassword = findViewById(R.id.loginPassword);
@@ -45,16 +40,9 @@ public class Login extends AppCompatActivity {
         auth = FirebaseAuth.getInstance();
         FirebaseUser user = auth.getCurrentUser();
 
-
         if(user!=null)
         {
             String email = user.getEmail();
-//            String uid = user.getUid();
-
-            // Do something with the user's email and UID
-            // For example, you can display them or use them for further processing
-//            System.out.println("Email: " + email);
-//            System.out.println("UID: " + uid);
             if(email.equals("Manager1@services.com")) {
                 Intent intent = new Intent(Login.this, HomeManager.class);
                 startActivity(intent);
@@ -64,10 +52,6 @@ public class Login extends AppCompatActivity {
                 startActivity(intent);
             }
         }
-
-
-        //start here
-
        loginButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -84,10 +68,7 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-
-        //end here
-
-       backButton.setOnClickListener(new View.OnClickListener() {
+        backButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 onBackPressed();
@@ -120,19 +101,16 @@ public class Login extends AppCompatActivity {
                 }
             }
         });
-
         auth.signInWithEmailAndPassword(email,password).addOnFailureListener(Login.this, new OnFailureListener() {
             @Override
             public void onFailure(@NonNull Exception e) {
                 Toast.makeText(Login.this, "enter correct credentials", Toast.LENGTH_SHORT).show();
             }
         });
-
     }
     @Override
     public void onBackPressed() {
         finish();
         super.onBackPressed();
     }
-
 }
